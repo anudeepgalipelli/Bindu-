@@ -683,6 +683,18 @@ footer{background:var(--footer-bg);border-top:1px solid var(--border);padding:50
 
   </div>
 </section>
+<script>
+(function(){
+  if(window.innerWidth<=1024){
+    var s=document.querySelectorAll('.hero-photo-fill,.hero-deco,.hero-photo-overlay,.pch-reg,.photo-caption-hero,.photo-aura,.photo-shimmer,.photo-dots');
+    for(var i=0;i<s.length;i++)s[i].style.display='none';
+    var o=document.querySelector('.hero-oval-wrap');
+    if(o)o.style.display='flex';
+    var r=document.querySelector('.hero-right');
+    if(r){r.style.display='flex';r.style.alignItems='center';r.style.justifyContent='center';r.style.minHeight='auto';r.style.background='var(--bg)';r.style.padding='48px 0 24px';}
+  }
+})();
+</script>
 
 <div class="ticker">
   <div class="ticker-track">
