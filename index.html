@@ -279,6 +279,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--border);padding:50
 @media(max-width:1024px){
   .photo-pill,.photo-arc-tl,.photo-arc-br{display:none !important}
   #hero{grid-template-columns:1fr;padding-top:68px}
+  .hero-deco{display:none !important}
   .hero-right{min-height:55vw;order:-1;overflow:hidden !important}
   .hero-left{max-width:100%;margin:0;padding:40px 5%;text-align:center;align-items:center}
   .chip{display:none}
@@ -431,7 +432,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--border);padding:50
     justify-content:center;
     background:var(--bg);
     min-height:unset !important;
-    padding:40px 20px 20px;
+    padding:48px 20px 24px;
     overflow:visible !important;
   }
 
@@ -443,9 +444,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--border);padding:50
   /* Show the oval portrait instead */
   .hero-oval-wrap{
     position:relative;
-    width:min(68vw, 280px);
-    height:min(95vw, 390px);
+    width:min(72vw, 300px);
+    height:min(100vw, 420px);
     flex-shrink:0;
+    margin:0 auto;
     animation:ovalFloat 5s ease-in-out infinite;
     display:flex;
     align-items:center;
@@ -491,7 +493,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--border);padding:50
     inset:3px;
     border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
     object-fit:cover;
-    object-position:center 8%;
+    object-position:center 15%;
     z-index:1;
     display:block;
   }
