@@ -1,949 +1,1061 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dr. K Bindu Pavani — Soft Pastel — Dusty Rose & Sage</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. K Bindu Pavani — Premium 3D Glassmorphism Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#fdf8f5;--bg2:#f7f0eb;--nav-bg:rgba(253,248,245,0.88);
-  --card:#ffffff;--border:rgba(180,140,120,0.18);--border2:rgba(180,140,120,0.3);
-  --text:#2d1f1a;--text-m:#7a5c52;--text-d:#b8978a;
-  --accent:#b5735a;--accent-text:#ffffff;--accent-faint:rgba(181,115,90,0.1);
-  --accent-faint2:rgba(181,115,90,0.06);--accent-border:rgba(181,115,90,0.25);
-  --accent-shadow:rgba(181,115,90,0.25);--hero-deco:rgba(234,210,198,0.35);
-  --hero-side-fade:#fdf8f5;--tag-bg:rgba(181,115,90,0.07);--hover-bg:rgba(181,115,90,0.07);
-  --input-bg:#fef9f7;--tl-line:linear-gradient(180deg,#b5735a,#8caa8e,#c4a882);
-  --photo-grad:#2d1f1a;--footer-bg:#f7f0eb;--shadow:rgba(45,31,26,0.12);
-  --success:#6aaa6e;--gold:#c8913e;--al-sub:rgba(255,255,255,0.82);
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4,h5{font-family:'Cormorant Garamond',serif;font-weight:600}
-::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px}
-#pgbar{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;transition:width .1s linear}
+
+:root {
+  --bg-main: #061412;
+  --bg-sec: #091f1b;
+  --nav-bg: rgba(6, 20, 18, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(212, 175, 55, 0.2);
+  --card-border-hover: rgba(212, 175, 55, 0.6);
+  --card-glow: rgba(212, 175, 55, 0.2);
+  
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --text-accent: #d4af37;
+  --text-gold: #f59e0b;
+  --accent-rose: #10b981;
+  
+  --gradient-cyan: linear-gradient(135deg, #d4af37 0%, #f3e5ab 100%);
+  --gradient-rose: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
+  
+  --shadow-3d: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
+  --shadow-inset: inset 0 1px 1px rgba(255, 255, 255, 0.15);
+
+  --badge-bg: rgba(9, 31, 27, 0.85);
+  --badge-txt: #fff;
+  --badge-cap-bg: rgba(16, 185, 129, 0.95);
+  
+  --nav-text-grad: linear-gradient(to right, #fff, #cbd5e1);
+  --hs-num-grad: linear-gradient(135deg, #fff 0%, #d4af37 100%);
+  --btn-sec-bg: rgba(255,255,255,0.05);
+  --btn-sec-border: rgba(255,255,255,0.15);
+  
+  --acc-bg: rgba(255,255,255,0.02);
+  --stat-bg: rgba(255,255,255,0.02);
+  --img-wrap-bg: rgba(255,255,255,0.02);
+  --border-sub: rgba(255,255,255,0.08);
+  --aura-grad: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(16, 185, 129, 0.08) 40%, rgba(0,0,0,0) 70%);
+  --orb-1-bg: rgba(212, 175, 55, 0.15);
+  --orb-2-bg: rgba(16, 185, 129, 0.12);
+  --orb-3-bg: rgba(243, 229, 171, 0.12);
+  --ticker-grad: linear-gradient(90deg, var(--bg-sec) 0%, rgba(212, 175, 55, 0.1) 50%, var(--bg-sec) 100%);
+  --cc-note-bg: rgba(16, 185, 129, 0.08);
+  --cc-note-border: rgba(16, 185, 129, 0.25);
+  --cc-note-spec-bg: rgba(212, 175, 55, 0.08);
+  --cc-note-spec-border: rgba(212, 175, 55, 0.25);
+}
+
+:root[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-sec: #f1f5f9;
+  --nav-bg: rgba(248, 250, 252, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-border: rgba(212, 175, 55, 0.35);
+  --card-border-hover: rgba(212, 175, 55, 0.9);
+  --card-glow: rgba(212, 175, 55, 0.15);
+  
+  --text-main: #061412;
+  --text-muted: #475569;
+  --text-accent: #b45309;
+  --text-gold: #d97706;
+  --accent-rose: #047857;
+  
+  --gradient-cyan: linear-gradient(135deg, #b45309 0%, #d4af37 100%);
+  --gradient-rose: linear-gradient(135deg, #047857 0%, #10b981 100%);
+  --gradient-gold: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.01) 100%);
+  
+  --shadow-3d: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+  --shadow-inset: inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  
+  --badge-bg: rgba(255, 255, 255, 0.95);
+  --badge-txt: #061412;
+  --badge-cap-bg: rgba(4, 120, 87, 0.95);
+  
+  --nav-text-grad: linear-gradient(to right, #061412, #334155);
+  --hs-num-grad: linear-gradient(135deg, #061412 0%, #b45309 100%);
+  --btn-sec-bg: rgba(0,0,0,0.04);
+  --btn-sec-border: rgba(0,0,0,0.15);
+  
+  --acc-bg: rgba(255, 255, 255, 0.8);
+  --stat-bg: rgba(255, 255, 255, 0.8);
+  --img-wrap-bg: rgba(255, 255, 255, 0.8);
+  --border-sub: rgba(0,0,0,0.08);
+  --aura-grad: radial-gradient(circle, rgba(180, 83, 9, 0.12) 0%, rgba(4, 120, 87, 0.06) 40%, rgba(0,0,0,0) 70%);
+  --orb-1-bg: rgba(180, 83, 9, 0.15);
+  --orb-2-bg: rgba(4, 120, 87, 0.12);
+  --orb-3-bg: rgba(217, 119, 6, 0.12);
+  --ticker-grad: linear-gradient(90deg, var(--bg-sec) 0%, rgba(180, 83, 9, 0.1) 50%, var(--bg-sec) 100%);
+  --cc-note-bg: rgba(4, 120, 87, 0.08);
+  --cc-note-border: rgba(4, 120, 87, 0.25);
+  --cc-note-spec-bg: rgba(180, 83, 9, 0.08);
+  --cc-note-spec-border: rgba(180, 83, 9, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-cyan);
+  border-radius: 4px;
+}
+
+/* Custom Interactive Cursor Aura */
+#cursor-aura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: var(--aura-grad);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: transform 0.15s ease-out, background 0.5s ease;
+  will-change: transform;
+}
+
+#pgbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--gradient-cyan);
+  z-index: 9999;
+  transition: width 0.1s linear, background 0.5s ease;
+  box-shadow: 0 0 10px var(--text-accent);
+}
+
+/* Background Interactive Canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ambient Glowing Background Orbs */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+  animation: orbFloat 20s infinite alternate ease-in-out;
+  transition: background 0.5s ease;
+}
+.orb-1 { top: -10%; left: 10%; width: 60vw; height: 60vw; background: var(--orb-1-bg); animation-delay: 0s; }
+.orb-2 { top: 40%; right: -10%; width: 55vw; height: 55vw; background: var(--orb-2-bg); animation-delay: -5s; }
+.orb-3 { bottom: -10%; left: 20%; width: 65vw; height: 65vw; background: var(--orb-3-bg); animation-delay: -10s; }
+
+@keyframes orbFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(5%, 8%) scale(1.1); }
+  100% { transform: translate(-5%, -5%) scale(0.95); }
+}
+
+/* Content Container */
+.page-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 3D Glassmorphism Cards */
+.card-3d {
+  background: var(--card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-3d), var(--shadow-inset);
+  transition: transform 0.2s ease, border-color 0.4s ease, box-shadow 0.4s ease, background 0.5s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+.card-3d::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+.card-3d:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: 0 35px 65px -15px var(--card-glow), var(--shadow-inset);
+}
+.card-3d:hover::before {
+  opacity: 1;
+}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;width:100%;z-index:1000;height:68px;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5%;transition:box-shadow .4s;}
-nav.scrolled{box-shadow:0 4px 24px var(--shadow)}
-.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none}
-.nav-gem{width:36px;height:36px;border-radius:9px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1rem;color:var(--accent-text)}
-.nav-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--text);line-height:1.1}
-.nav-brand-sub{font-size:0.58rem;color:var(--accent);font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
-.nav-links a{font-size:0.83rem;font-weight:500;color:var(--text-m);text-decoration:none;padding:7px 11px;border-radius:7px;transition:color .2s,background .2s}
-.nav-links a:hover{color:var(--text);background:var(--hover-bg)}
-.btn-nav{padding:8px 18px;border-radius:50px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);font-weight:600;font-size:0.8rem;text-decoration:none;transition:background .2s,color .2s}
-.btn-nav:hover{background:var(--accent);color:var(--accent-text)}
+nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000; height: 80px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--card-border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%; transition: all 0.4s ease, background 0.5s ease, border-color 0.5s ease;
+}
+nav.scrolled {
+  height: 70px;
+  background: var(--bg-sec);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 14px; text-decoration: none;
+}
+.nav-gem {
+  width: 44px; height: 44px; border-radius: 14px;
+  background: var(--gradient-cyan);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: 1.4rem;
+  color: var(--bg-main); box-shadow: 0 0 20px var(--card-glow);
+}
+.nav-brand-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700;
+  color: var(--text-main); line-height: 1.1;
+  background: var(--nav-text-grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.nav-brand-sub {
+  font-size: 0.68rem; color: var(--text-accent); font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 8px; list-style: none;
+}
+.nav-links a {
+  font-size: 0.9rem; font-weight: 500; color: var(--text-muted); text-decoration: none;
+  padding: 8px 16px; border-radius: 10px; transition: all 0.3s ease;
+}
+.nav-links a:hover {
+  color: var(--text-main); background: rgba(128,128,128,0.08); box-shadow: 0 0 15px rgba(128,128,128,0.05);
+}
+.btn-nav {
+  padding: 10px 22px; border-radius: 50px;
+  background: var(--gradient-rose);
+  color: #fff !important; font-weight: 700; font-size: 0.88rem; text-decoration: none;
+  transition: all 0.3s ease; border: none; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-nav:hover {
+  transform: translateY(-2px); box-shadow: 0 15px 35px rgba(16, 185, 129, 0.5);
+}
 
-/* HERO */
-#hero{
-  min-height:100vh;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:stretch;
-  padding-top:68px;
-  background:var(--bg);
-  position:relative;
-  overflow:hidden;
+/* THEME TOGGLE BUTTON */
+.theme-toggle {
+  width: 44px; height: 44px; border-radius: 14px;
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  color: var(--text-accent); font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.3s ease, background 0.5s ease, border-color 0.5s ease; backdrop-filter: blur(10px); box-shadow: 0 5px 15px var(--card-glow);
 }
-.hero-pattern{position:absolute;inset:0;opacity:0.04;pointer-events:none;background-image:radial-gradient(var(--text) 1px,transparent 1px);background-size:26px 26px;}
-.hero-deco{position:absolute;right:0;top:0;width:50%;height:100%;background:var(--hero-deco);pointer-events:none;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);}
+.theme-toggle:hover {
+  background: var(--gradient-cyan); color: #fff; transform: rotate(30deg) scale(1.1); box-shadow: 0 10px 25px var(--card-glow); border-color: transparent;
+}
 
-/* LEFT */
-.hero-left{padding:48px 4% 48px 5%;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;max-width:600px;margin-left:auto;}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--tag-bg);border:1px solid var(--border);border-radius:50px;padding:5px 16px 5px 9px;margin-bottom:22px;width:fit-content}
-.tag-dot{width:7px;height:7px;border-radius:50%;background:var(--success);box-shadow:0 0 7px var(--success);animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.tag-txt{font-size:0.7rem;font-weight:500;color:var(--text-m)}
-.hero-left h1{font-size:clamp(2.6rem,3.8vw,4.2rem);line-height:1.0;letter-spacing:-0.5px;margin-bottom:16px}
-.h1-title{display:block;color:var(--text-d);font-style:italic;font-weight:400;font-size:0.52em;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
-.h1-name{display:block;color:var(--text)}
-.h1-role{display:block;color:var(--accent);font-style:italic;font-size:0.66em;margin-top:4px}
-.hero-desc{font-size:0.95rem;color:var(--text-m);line-height:1.75;margin-bottom:26px;max-width:420px;}
-.hero-stats{display:flex;background:var(--card);border:1px solid var(--border);border-radius:13px;margin-bottom:28px;width:fit-content;overflow:hidden}
-.hs{padding:13px 22px;text-align:center;position:relative}
-.hs+.hs::before{content:'';position:absolute;left:0;top:20%;bottom:20%;width:1px;background:var(--border)}
-.hs-num{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:700;color:var(--text);line-height:1}
-.hs-num sup{font-size:.85rem;color:var(--accent)}
-.hs-lbl{font-size:0.62rem;color:var(--text-d);text-transform:uppercase;letter-spacing:1px;font-weight:500;margin-top:3px}
-.hero-btns{display:flex;gap:11px;align-items:center;flex-wrap:wrap}
-.btn-primary{padding:12px 26px;background:var(--accent);border-radius:50px;font-weight:600;font-size:0.86rem;color:var(--accent-text);text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px var(--accent-shadow);transition:transform .2s,box-shadow .2s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--accent-shadow)}
-.btn-secondary{padding:11px 24px;border:1.5px solid var(--border);border-radius:50px;font-weight:600;font-size:0.86rem;color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color .2s,background .2s,transform .2s}
-.btn-secondary:hover{border-color:var(--accent);background:var(--hover-bg);transform:translateY(-2px)}
+/* HERO SECTION */
+#hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  padding: 100px 5% 60px;
+  position: relative;
+}
 
-/* RIGHT — photo fills full column height */
-.hero-right{
-  position:relative;z-index:2;overflow:visible;
-  min-height:calc(100vh - 68px);
+.hero-left {
+  position: relative; z-index: 5; max-width: 680px;
 }
-.hero-photo-fill{
-  width:100%;height:100%;
-  min-height:calc(100vh - 68px);
-  object-fit:cover;
-  object-position:center top;
-  display:block;
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 50px; padding: 8px 20px 8px 12px; margin-bottom: 28px;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
 }
-.hero-photo-overlay{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(to right,var(--hero-side-fade) 0%,transparent 16%,transparent 100%),
-    linear-gradient(to top,var(--photo-grad) 0%,transparent 28%);
-  pointer-events:none;
+.tag-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--text-accent); box-shadow: 0 0 12px var(--text-accent);
+  animation: pulseGlow 2s infinite;
 }
-.pch-reg{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.14);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.22);border-radius:8px;padding:5px 12px;font-size:0.64rem;font-weight:700;color:#fff;z-index:4;}
-.photo-caption-hero{position:absolute;bottom:22px;left:22px;z-index:4;}
-.pch-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.15}
-.pch-sub{font-size:0.65rem;color:rgba(255,255,255,0.65);font-weight:500;margin-top:2px}
+@keyframes pulseGlow { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
 
-/*
-  CHIPS — placed so they never overlap the face (top area) or name caption (bottom area).
-  chip-a: DNB Qualified  → left side, vertically centred slightly above midpoint
-  chip-b: IVF Specialist → left side, vertically centred slightly below midpoint
-  Both slide OUT to the LEFT of the photo, so they sit beside the image, not on it.
-*/
-.chip{
-  position:absolute;
-  background:var(--card);
-  border:1px solid var(--border2);
-  border-radius:13px;
-  padding:11px 15px;
-  display:flex;align-items:center;gap:9px;
-  box-shadow:0 8px 28px var(--shadow);
-  white-space:nowrap;
-  z-index:10;
-  animation:floatY 6s ease-in-out infinite;
+.tag-txt {
+  font-size: 0.8rem; font-weight: 700; color: var(--text-accent); letter-spacing: 0.5px; text-transform: uppercase;
 }
-/* Left side, upper-mid: well below the face area (face ends ~40%), above caption area (starts ~75%) */
-.chip-a{
-  left:-170px;         /* sticks out to the LEFT of the photo column */
-  top:42%;
-  animation-delay:0s;
+
+.hero-left h1 {
+  font-size: clamp(3rem, 4.5vw, 5.2rem); line-height: 1.05; margin-bottom: 22px;
 }
-/* Left side, lower-mid: just above the caption band */
-.chip-b{
-  left:-170px;
-  top:62%;
-  animation-delay:1s;
+.h1-title {
+  display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.32em; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;
 }
-@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.chip-ico{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.88rem;flex-shrink:0;background:var(--accent-faint);color:var(--accent)}
-.chip-name{font-size:0.76rem;font-weight:700;color:var(--text);line-height:1.2}
-.chip-sub{font-size:0.6rem;color:var(--text-d)}
+.h1-name {
+  display: block; color: var(--text-main); font-weight: 800; background: var(--nav-text-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.h1-role {
+  display: block; font-family: 'Cormorant Garamond', serif; font-size: 0.62em; font-style: italic; background: var(--gradient-cyan); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: 8px;
+}
+
+.hero-desc {
+  font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 36px; max-width: 540px; font-weight: 400;
+}
+
+.hero-stats {
+  display: flex; gap: 20px; margin-bottom: 40px; flex-wrap: wrap;
+}
+.stat-box {
+  background: var(--stat-bg); backdrop-filter: blur(20px); border: 1px solid var(--border-sub);
+  padding: 18px 28px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  text-align: center; flex: 1; min-width: 140px; transition: transform 0.3s ease, border-color 0.3s ease, background 0.5s ease;
+}
+.stat-box:hover {
+  transform: translateY(-5px); border-color: var(--card-border-hover);
+}
+.hs-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700; color: var(--text-main); line-height: 1; margin-bottom: 6px;
+  background: var(--hs-num-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hs-lbl {
+  font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;
+}
+
+.hero-btns {
+  display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+}
+.btn-primary {
+  padding: 16px 36px; background: var(--gradient-cyan); border-radius: 50px; font-weight: 700; font-size: 1rem; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 15px 35px var(--card-glow); transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-3px); box-shadow: 0 20px 45px var(--card-glow);
+}
+.btn-secondary {
+  padding: 15px 34px; background: var(--btn-sec-bg); border: 1px solid var(--btn-sec-border); border-radius: 50px; font-weight: 700; font-size: 1rem; color: var(--text-main); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; backdrop-filter: blur(10px); transition: all 0.3s ease, background 0.5s ease, border-color 0.5s ease;
+}
+.btn-secondary:hover {
+  background: var(--card-bg); border-color: var(--text-accent); transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* HERO RIGHT: 3D Glowing Portrait Container */
+.hero-right {
+  position: relative; z-index: 5; display: flex; align-items: center; justify-content: center; width: 100%;
+}
+.portrait-3d-wrap {
+  position: relative; width: 420px; height: 560px;
+  border-radius: 36px; transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: floatContainer 8s infinite alternate ease-in-out;
+}
+@keyframes floatContainer { 0% { transform: translateY(0px) rotate3d(0, 1, 0, 0deg); } 100% { transform: translateY(-16px) rotate3d(0, 1, 0, 4deg); } }
+
+.portrait-glow-ring {
+  position: absolute; inset: -15px; border-radius: 46px;
+  background: linear-gradient(135deg, #d4af37, #10b981, #f59e0b, #d4af37); background-size: 300% 300%;
+  animation: ringGradient 12s infinite linear; filter: blur(25px); opacity: 0.75; z-index: 1;
+}
+@keyframes ringGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+.portrait-inner {
+  position: absolute; inset: 0; border-radius: 36px; background: var(--bg-sec); border: 2px solid var(--border-sub); overflow: hidden; z-index: 2; box-shadow: 0 30px 70px rgba(0,0,0,0.5), inset 0 2px 5px rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.5s ease, border-color 0.5s ease;
+}
+.portrait-inner img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.5s ease;
+}
+.portrait-inner img.hero-oval-photo {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .portrait-inner img:not(.hero-oval-photo) {
+    display: none !important;
+  }
+  .portrait-inner img.hero-oval-photo {
+    display: block !important; width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  }
+}
+.portrait-3d-wrap:hover .portrait-inner img {
+  transform: scale(1.05);
+}
+
+/* 3D Floating Badges around Portrait */
+.badge-3d {
+  position: absolute; background: var(--badge-bg); backdrop-filter: blur(20px); border: 1px solid var(--border-sub); border-radius: 20px; padding: 14px 22px; display: flex; align-items: center; gap: 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.2); z-index: 10; transform-style: preserve-3d; white-space: nowrap; transition: all 0.3s ease, background 0.5s ease;
+}
+.badge-3d:hover {
+  transform: translateY(-5px) scale(1.05); border-color: var(--text-accent); box-shadow: 0 25px 50px var(--card-glow);
+}
+.badge-reg {
+  top: 30px; right: -40px; animation: floatBadge1 6s infinite alternate ease-in-out;
+}
+.badge-spec {
+  bottom: 50px; left: -60px; animation: floatBadge2 7s infinite alternate ease-in-out;
+}
+.badge-caption {
+  bottom: 30px; right: 30px; background: var(--badge-cap-bg) !important; border-color: var(--border-sub);
+}
+
+@keyframes floatBadge1 { 0% { transform: translate3d(0, 0, 0px); } 100% { transform: translate3d(-10px, -12px, 20px); } }
+@keyframes floatBadge2 { 0% { transform: translate3d(0, 0, 0px); } 100% { transform: translate3d(12px, 15px, 25px); } }
+
+.badge-ico {
+  width: 38px; height: 38px; border-radius: 12px; background: rgba(212, 175, 55, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--text-accent);
+}
+.badge-txt { font-size: 0.95rem; font-weight: 700; color: var(--badge-txt); }
+.badge-caption .badge-txt { color: #fff; }
+.badge-sub { font-size: 0.7rem; color: var(--text-muted); font-weight: 600; margin-top: 2px; }
 
 /* TICKER */
-.ticker{background:var(--accent);padding:11px 0;overflow:hidden}
-.ticker-track{display:flex;width:max-content;animation:ticker 25s linear infinite}
-@keyframes ticker{to{transform:translateX(-50%)}}
-.ticker-item{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;font-weight:600;color:var(--accent-text);padding:0 28px;display:flex;align-items:center;gap:28px;white-space:nowrap}
-.ticker-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.4);display:inline-block}
+.ticker-container {
+  background: var(--ticker-grad);
+  padding: 24px 0; overflow: hidden; border-top: 1px solid var(--border-sub); border-bottom: 1px solid var(--border-sub); position: relative; z-index: 5; transition: background 0.5s ease, border-color 0.5s ease;
+}
+.ticker-track {
+  display: flex; width: max-content; animation: tickerScroll 35s linear infinite;
+}
+@keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-/* SECTIONS */
-section{padding:72px 5%}
-.wrap{max-width:1160px;margin:0 auto}
-.sec-label{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:0.66rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
-.sec-label::before{content:'';width:20px;height:1.5px;background:var(--accent)}
-.sec-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.2vw,3rem);color:var(--text);line-height:1.1;margin-bottom:12px}
-.sec-h2 em{color:var(--accent);font-style:italic}
-.sec-sub{font-size:0.9rem;color:var(--text-m);max-width:480px;line-height:1.75}
+.ticker-item {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--text-main); padding: 0 40px; display: flex; align-items: center; gap: 40px; white-space: nowrap; letter-spacing: 1px;
+}
+.ticker-dot {
+  width: 10px; height: 10px; border-radius: 50%; background: var(--gradient-rose); box-shadow: 0 0 15px var(--accent-rose);
+}
+
+/* GLOBAL SECTIONS */
+section {
+  padding: 120px 5%; position: relative; z-index: 5;
+}
+.wrap {
+  max-width: 1280px; margin: 0 auto;
+}
+.sec-label {
+  display: inline-flex; align-items: center; gap: 12px; color: var(--text-accent); font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;
+}
+.sec-label::before { content: ''; width: 30px; height: 2px; background: var(--gradient-cyan); }
+.sec-h2 {
+  font-size: clamp(2.8rem, 4vw, 4.2rem); color: var(--text-main); line-height: 1.1; margin-bottom: 20px;
+}
+.sec-h2 em {
+  font-style: normal; background: var(--gradient-cyan); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.sec-sub {
+  font-size: 1.15rem; color: var(--text-muted); max-width: 600px; line-height: 1.8; margin-bottom: 30px;
+}
 
 /* ABOUT */
-#about{background:var(--bg2)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.about-img-wrap{position:relative}
-.about-img{width:100%;display:block;border-radius:3px 18px 3px 18px;border:1px solid var(--border2)}
-.about-badge{position:absolute;bottom:-18px;right:-18px;width:90px;height:90px;border-radius:50%;background:var(--accent);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 24px var(--accent-shadow);border:4px solid var(--bg2)}
-.ab-big{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:700;color:var(--accent-text);line-height:1}
-.ab-sm{font-size:0.5rem;color:var(--accent-text);opacity:.8;font-weight:600;text-align:center;text-transform:uppercase;letter-spacing:.5px}
-.about-text p{font-size:0.9rem;color:var(--text-m);line-height:1.85;margin-bottom:13px}
-.accordion{margin-top:24px;display:flex;flex-direction:column;gap:9px}
-.acc{background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden;transition:border-color .3s}
-.acc.open{border-color:var(--accent)}
-.acc-hd{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;cursor:pointer;user-select:none}
-.acc-hd span{font-weight:600;font-size:0.86rem;color:var(--text)}
-.acc-hd i{color:var(--accent);transition:transform .4s;font-size:0.76rem}
-.acc.open .acc-hd i{transform:rotate(180deg)}
-.acc-bd{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 20px;font-size:0.84rem;color:var(--text-m);line-height:1.8}
-.acc.open .acc-bd{max-height:110px;padding:0 20px 16px}
+#about { background-color: var(--bg-sec); position: relative; transition: background-color 0.5s ease; }
+.about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
+.about-img-wrap { position: relative; border-radius: 32px; padding: 20px; background: var(--img-wrap-bg); border: 1px solid var(--border-sub); box-shadow: 0 30px 60px rgba(0,0,0,0.3); transition: background 0.5s ease, border-color 0.5s ease; }
+.about-img, .about-img-wrap img { width: 100%; border-radius: 24px; display: block; object-fit: cover; }
+.about-badge { position: absolute; bottom: -20px; right: -20px; width: 130px; height: 130px; border-radius: 32px; background: var(--gradient-rose); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4); border: 4px solid var(--bg-sec); transform: rotate(5deg); transition: transform 0.3s ease, border-color 0.5s ease; }
+.about-badge:hover { transform: scale(1.1) rotate(0deg); }
+.ab-big { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 800; color: #fff; line-height: 1; }
+.ab-sm { font-size: 0.75rem; color: #fff; font-weight: 700; text-align: center; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+.about-text p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 20px; font-weight: 400; }
+
+.accordion { margin-top: 36px; display: flex; flex-direction: column; gap: 16px; }
+.acc { background: var(--acc-bg); border: 1px solid var(--border-sub); border-radius: 16px; overflow: hidden; transition: all 0.4s ease, background 0.5s ease, border-color 0.5s ease; backdrop-filter: blur(10px); }
+.acc.open { border-color: var(--text-accent); background: var(--card-glow); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+.acc-hd { display: flex; align-items: center; justify-content: space-between; padding: 22px 28px; cursor: pointer; user-select: none; }
+.acc-hd span { font-weight: 700; font-size: 1.1rem; color: var(--text-main); }
+.acc-hd i { color: var(--text-accent); transition: transform 0.4s ease; font-size: 1rem; }
+.acc.open .acc-hd i { transform: rotate(180deg); }
+.acc-bd { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 28px; font-size: 1rem; color: var(--text-muted); line-height: 1.8; }
+.acc.open .acc-bd { max-height: 200px; padding: 0 28px 24px; }
 
 /* SERVICES */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.svc-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 22px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
-.svc-card::before{content:'';position:absolute;inset:0;opacity:0;background:var(--accent-faint);transition:opacity .3s;border-radius:16px}
-.svc-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 10px 28px var(--shadow)}
-.svc-card:hover::before{opacity:1}
-.svc-card>*{position:relative;z-index:1}
-.svc-ico{width:44px;height:44px;border-radius:11px;background:var(--accent-faint);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--accent);margin-bottom:15px}
-.svc-card h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
-.svc-card p{font-size:0.82rem;color:var(--text-d);line-height:1.65}
-.svc-n{position:absolute;bottom:6px;right:14px;font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:700;color:var(--accent-faint2);pointer-events:none;opacity:.5}
+.swipe-hint {
+  display: none;
+}
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.svc-card { padding: 42px 36px; display: flex; flex-direction: column; justify-content: space-between; min-height: 340px; cursor: pointer; }
+.svc-ico { width: 64px; height: 64px; border-radius: 20px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05)); border: 1px solid rgba(212, 175, 55, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--text-accent); margin-bottom: 24px; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2); transition: transform 0.3s ease; }
+.svc-card:hover .svc-ico { transform: scale(1.1); background: var(--gradient-cyan); color: #fff; }
+.svc-card h3 { font-size: 1.8rem; margin-bottom: 14px; color: var(--text-main); }
+.svc-card p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; font-weight: 400; }
+.svc-n { position: absolute; bottom: -10px; right: 10px; font-family: 'Cormorant Garamond', serif; font-size: 7rem; font-weight: 800; background: linear-gradient(180deg, rgba(128,128,128,0.1) 0%, rgba(128,128,128,0) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none; transition: transform 0.4s ease; }
+.svc-card:hover .svc-n { transform: translateY(-10px) scale(1.05); }
 
-/* TIMELINE */
-#qualifications{background:var(--bg2)}
-.timeline{max-width:680px;margin:0 auto;padding-left:32px;position:relative}
-.timeline::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:1.5px;background:var(--tl-line)}
-.tl-item{position:relative;padding-left:40px;padding-bottom:32px}
-.tl-item:last-child{padding-bottom:0}
-.tl-dot{position:absolute;left:-20px;top:2px;width:40px;height:40px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.82rem;color:var(--accent-text);z-index:1;box-shadow:0 0 0 4px var(--bg2),0 4px 12px var(--accent-shadow)}
-.tl-box{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:18px 22px;transition:border-color .3s,transform .3s}
-.tl-item:hover .tl-box{border-color:var(--accent);transform:translateX(5px)}
-.tl-year{display:inline-block;background:var(--accent-faint);color:var(--accent);border:1px solid var(--accent-border);font-size:0.65rem;font-weight:700;padding:2px 11px;border-radius:50px;margin-bottom:8px;letter-spacing:.5px}
-.tl-box h3{font-family:'Cormorant Garamond',serif;font-size:1.04rem;font-weight:700;color:var(--text);margin-bottom:5px}
-.tl-box p{font-size:0.82rem;color:var(--text-d);line-height:1.6}
+/* QUALIFICATIONS */
+#qualifications { background-color: var(--bg-main); position: relative; transition: background-color 0.5s ease; }
+.timeline { max-width: 860px; margin: 0 auto; padding-left: 50px; position: relative; }
+.timeline::before { content: ''; position: absolute; left: 18px; top: 10px; bottom: 10px; width: 4px; background: var(--gradient-cyan); border-radius: 4px; box-shadow: 0 0 15px var(--text-accent); }
+.tl-item { position: relative; padding-left: 50px; padding-bottom: 60px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot { position: absolute; left: -22px; top: 0; width: 56px; height: 56px; border-radius: 50%; background: var(--bg-sec); border: 4px solid var(--text-accent); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--text-accent); z-index: 5; box-shadow: 0 0 25px var(--card-glow); transition: transform 0.3s ease, background 0.5s ease, color 0.5s ease; }
+.tl-item:hover .tl-dot { transform: scale(1.15) rotate(360deg); background: var(--text-accent); color: #fff; }
+.tl-box { padding: 36px 42px; border-radius: 24px; }
+.tl-year { display: inline-block; background: rgba(212, 175, 55, 0.15); color: var(--text-accent); border: 1px solid rgba(212, 175, 55, 0.3); font-size: 0.85rem; font-weight: 800; padding: 6px 18px; border-radius: 50px; margin-bottom: 14px; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.15); }
+.tl-box h3 { font-size: 1.8rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+.tl-box p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; }
 
 /* CLINICS */
-.clinic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.clinic-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
-.clinic-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 10px 28px var(--shadow)}
-.cc-stripe{height:3px;background:var(--accent)}
-.cc-body2{padding:20px 22px 16px}
-.cc-tag{font-size:0.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-.cc-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:15px}
-.cc-row{display:flex;gap:9px;font-size:0.81rem;color:var(--text-m);margin-bottom:9px;align-items:flex-start}
-.cc-row i{color:var(--accent);font-size:0.74rem;margin-top:4px;flex-shrink:0}
-.cc-note{margin:0 22px 18px;background:var(--accent-faint);border:1px solid var(--accent-border);border-radius:8px;padding:7px 12px;font-size:0.74rem;color:var(--text-m);display:flex;gap:7px;align-items:center}
-
-/* APPOINTMENT */
-#appointment{background:var(--bg2)}
-.appt-wrap{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;background:var(--card);border:1px solid var(--border2);border-radius:20px;overflow:hidden;box-shadow:0 14px 44px var(--shadow)}
-.appt-left{padding:38px 34px;background:var(--accent);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
-.appt-left::before{content:'';position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,0.07);top:-80px;right:-60px;pointer-events:none}
-.appt-left::after{content:'';position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,0.05);bottom:-45px;left:-35px;pointer-events:none}
-.al-top h3{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:700;color:var(--accent-text);line-height:1.15;margin-bottom:12px;position:relative;z-index:1}
-.al-top p{font-size:0.86rem;color:var(--al-sub);line-height:1.75;position:relative;z-index:1}
-.al-checks{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
-.al-check{display:flex;align-items:center;gap:10px;font-size:0.84rem;color:var(--al-sub);font-weight:500}
-.al-check i{color:var(--accent-text)}
-.appt-right{padding:38px 36px}
-.appt-right h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--text);margin-bottom:22px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
-.fg label{font-size:0.66rem;font-weight:700;color:var(--text-m);letter-spacing:.8px;text-transform:uppercase}
-.fg input,.fg select,.fg textarea{background:var(--input-bg);border:1.5px solid var(--border);border-radius:9px;padding:11px 14px;color:var(--text);font-family:'DM Sans';font-size:0.86rem;outline:none;transition:border-color .3s,box-shadow .3s;width:100%}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-faint)}
-.fg input::placeholder,.fg textarea::placeholder{color:var(--text-d)}
-.fg select option{background:var(--card)}
-.fg textarea{resize:vertical;min-height:80px}
-.btn-submit{width:100%;padding:13px;background:var(--accent);color:var(--accent-text);border:none;border-radius:10px;font-size:0.9rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 16px var(--accent-shadow);transition:transform .2s,box-shadow .2s}
-.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--accent-shadow)}
-.form-note{font-size:0.68rem;color:var(--text-d);text-align:center;margin-top:10px}
+#clinics { background-color: var(--bg-sec); transition: background-color 0.5s ease; }
+.clinic-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.clinic-card { border-radius: 28px; overflow: hidden; padding: 0; display: flex; flex-direction: column; }
+.cc-stripe { height: 6px; background: var(--gradient-rose); width: 100%; }
+.cc-body2 { padding: 46px 46px 32px; flex: 1; display: flex; flex-direction: column; }
+.cc-tag { font-size: 0.8rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-rose); margin-bottom: 12px; }
+.cc-name { font-size: 2.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 24px; }
+.cc-row { display: flex; gap: 16px; font-size: 1.05rem; color: var(--text-muted); margin-bottom: 16px; align-items: flex-start; line-height: 1.6; }
+.cc-row i { color: var(--text-accent); font-size: 1.2rem; margin-top: 4px; flex-shrink: 0; }
+.cc-note { margin: 0 46px 46px; background: var(--cc-note-bg); border: 1px solid var(--cc-note-border); border-radius: 16px; padding: 16px 24px; font-size: 0.95rem; color: var(--text-main); display: flex; gap: 14px; align-items: center; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15); transition: background 0.5s ease, border-color 0.5s ease; }
+.clinic-card:nth-child(2) .cc-note { background: var(--cc-note-spec-bg); border: 1px solid var(--cc-note-spec-border); }
+.cc-note i { color: var(--accent-rose); font-size: 1.3rem; }
+.clinic-card:nth-child(2) .cc-note i { color: var(--text-accent); }
 
 /* TESTIMONIALS */
-#testimonials{background:var(--bg)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.testi-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;transition:transform .3s,border-color .3s}
-.testi-card:hover{transform:translateY(-4px);border-color:var(--accent)}
-.tq{font-family:'Cormorant Garamond',serif;font-size:3.5rem;line-height:.7;color:var(--accent);opacity:.25;margin-bottom:10px}
-.stars{font-size:0.76rem;letter-spacing:2px;color:var(--gold);margin-bottom:11px}
-.testi-card blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.98rem;color:var(--text-m);line-height:1.7;margin-bottom:18px}
-.t-author{display:flex;align-items:center;gap:10px}
-.t-av{width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--accent-text);flex-shrink:0}
-.t-name{font-weight:700;font-size:0.85rem;color:var(--text)}
-.t-role{font-size:0.66rem;color:var(--text-d)}
+#testimonials { background-color: var(--bg-main); transition: background-color 0.5s ease; }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.testi-card { padding: 46px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+.tq { font-family: 'Cormorant Garamond', serif; font-size: 6rem; line-height: 0.5; color: var(--text-accent); opacity: 0.3; margin-bottom: 10px; }
+.stars { font-size: 1.1rem; letter-spacing: 4px; color: var(--text-gold); margin-bottom: 22px; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5)); }
+.testi-card blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.35rem; color: var(--text-main); line-height: 1.7; margin-bottom: 32px; flex: 1; }
+.t-author { display: flex; align-items: center; gap: 16px; border-top: 1px solid var(--border-sub); padding-top: 24px; transition: border-color 0.5s ease; }
+.t-av { width: 56px; height: 56px; border-radius: 18px; background: var(--gradient-cyan); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 800; color: #fff; flex-shrink: 0; box-shadow: 0 10px 20px var(--card-glow); }
+.t-name { font-weight: 700; font-size: 1.15rem; color: var(--text-main); }
+.t-role { font-size: 0.85rem; color: var(--text-accent); font-weight: 500; margin-top: 2px; }
+
+/* PREVIOUSLY WORKED */
+#prev-work { background-color: var(--bg-sec); transition: background-color 0.5s ease; }
+.pw-wrap { max-width: 680px; }
 
 /* FOOTER */
-footer{background:var(--footer-bg);border-top:1px solid var(--border);padding:50px 5% 24px}
-.ft-inner{max-width:1160px;margin:0 auto}
-.ft-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
-.ft-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:5px}
-.ft-logo span{color:var(--accent)}
-.ft-tag{font-size:0.6rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
-.ft-desc{font-size:0.81rem;color:var(--text-d);line-height:1.75;max-width:260px}
-.socials{display:flex;gap:8px;margin-top:16px}
-.sc{width:33px;height:33px;border-radius:8px;background:var(--card);border:1px solid var(--border);color:var(--text-d);text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:.84rem;transition:background .2s,color .2s,transform .2s}
-.sc:hover{background:var(--accent-faint);color:var(--accent);transform:translateY(-3px)}
-.ft-col h5{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:14px}
-.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.ft-col ul li a{color:var(--text-d);font-size:0.81rem;text-decoration:none;transition:color .2s}
-.ft-col ul li a:hover{color:var(--accent)}
-.ft-contact{display:flex;gap:9px;font-size:0.79rem;color:var(--text-d);margin-bottom:8px;align-items:flex-start}
-.ft-contact i{color:var(--accent);margin-top:3px;flex-shrink:0}
-.ft-bottom{padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
-.ft-disc{font-size:0.67rem;color:var(--text-d);max-width:560px;line-height:1.65}
-.ft-copy{font-size:0.67rem;color:var(--text-d)}
+footer { background: var(--bg-main); border-top: 1px solid var(--border-sub); padding: 100px 5% 40px; position: relative; z-index: 5; transition: background-color 0.5s ease, border-color 0.5s ease; }
+.ft-inner { max-width: 1280px; margin: 0 auto; }
+.ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 60px; margin-bottom: 60px; }
+.ft-logo { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 10px; }
+.ft-logo span { background: var(--gradient-cyan); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+.ft-tag { font-size: 0.85rem; color: var(--text-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: block; }
+.ft-desc { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 380px; }
+.socials { display: flex; gap: 14px; margin-top: 28px; }
+.sc { width: 46px; height: 46px; border-radius: 14px; background: var(--btn-sec-bg); border: 1px solid var(--btn-sec-border); color: var(--text-main); text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: all 0.3s ease; backdrop-filter: blur(10px); }
+.sc:hover { background: var(--gradient-cyan); color: #fff; transform: translateY(-5px); box-shadow: 0 10px 25px var(--card-glow); border-color: transparent; }
+.ft-col h5 { font-size: 1.4rem; color: var(--text-main); margin-bottom: 24px; }
+.ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.ft-col ul li a { color: var(--text-muted); font-size: 1rem; text-decoration: none; transition: color 0.3s ease; display: inline-block; }
+.ft-col ul li a:hover { color: var(--text-accent); transform: translateX(5px); }
+.ft-contact { display: flex; gap: 16px; font-size: 1rem; color: var(--text-muted); margin-bottom: 18px; align-items: flex-start; line-height: 1.6; }
+.ft-contact i { color: var(--text-accent); margin-top: 4px; font-size: 1.2rem; flex-shrink: 0; }
+.ft-bottom { padding-top: 36px; border-top: 1px solid var(--border-sub); display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; transition: border-color 0.5s ease; }
+.ft-disc { font-size: 0.85rem; color: var(--text-muted); max-width: 720px; line-height: 1.7; }
+.ft-copy { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
 
-.stbtn{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-text);border:none;display:none;align-items:center;justify-content:center;font-size:.84rem;cursor:pointer;z-index:999;box-shadow:0 4px 14px var(--accent-shadow);transition:transform .2s}
-.stbtn:hover{transform:translateY(-3px)}
-.stbtn.on{display:flex}
+.stbtn { position: fixed; bottom: 32px; right: 32px; width: 56px; height: 56px; border-radius: 18px; background: var(--gradient-cyan); color: #fff; border: none; display: none; align-items: center; justify-content: center; font-size: 1.3rem; cursor: pointer; z-index: 999; box-shadow: 0 10px 30px var(--card-glow); transition: all 0.3s ease; }
+.stbtn:hover { transform: translateY(-5px) scale(1.08); box-shadow: 0 15px 35px var(--card-border-hover); }
+.stbtn.on { display: flex; }
 
-/* ── HAMBURGER MENU ── */
-.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;z-index:1002;background:transparent;border:none;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .3s}
-.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.active span:nth-child(2){opacity:0}
-.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mob-menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:var(--bg);box-shadow:-8px 0 40px rgba(0,0,0,0.12);z-index:1001;padding:90px 32px 40px;display:flex;flex-direction:column;gap:6px;transition:right .35s cubic-bezier(.4,0,.2,1)}
-.mob-menu.open{right:0}
-.mob-menu a{font-size:1rem;font-weight:500;color:var(--text-m);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border);transition:color .2s,padding-left .2s}
-.mob-menu a:hover{color:var(--accent);padding-left:8px}
-.mob-menu .btn-nav{display:inline-flex;justify-content:center;margin-top:16px;padding:12px 24px;border-bottom:none;text-align:center}
-.mob-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:1000;opacity:0;pointer-events:none;transition:opacity .35s}
-.mob-overlay.open{opacity:1;pointer-events:all}
-@media(max-width:1024px){.hamburger{display:flex}}
+/* HAMBURGER MENU */
+.hamburger { display: none; flex-direction: column; gap: 6px; padding: 10px; cursor: pointer; z-index: 1002; background: transparent; border: none; }
+.hamburger span { display: block; width: 28px; height: 3px; background: var(--text-main); border-radius: 3px; transition: transform 0.35s ease, opacity 0.35s ease, background 0.5s ease; box-shadow: 0 0 10px rgba(128,128,128,0.2); }
+.hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); background: var(--text-accent); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); background: var(--text-accent); }
 
-/* ── WHATSAPP FLOATING BUTTON ── */
-.wa-float{position:fixed;bottom:24px;left:24px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;border:none;display:flex;align-items:center;justify-content:center;font-size:1.6rem;cursor:pointer;z-index:998;box-shadow:0 4px 18px rgba(37,211,102,0.4);transition:transform .3s,box-shadow .3s;animation:waPulse 2.5s ease-in-out infinite}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
-@keyframes waPulse{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 18px rgba(37,211,102,0.4),0 0 0 12px rgba(37,211,102,0.12)}}
-.wa-tooltip{position:absolute;left:64px;bottom:50%;transform:translateY(50%);background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 14px;white-space:nowrap;font-size:0.78rem;font-weight:600;color:var(--text);box-shadow:0 4px 16px var(--shadow);opacity:0;pointer-events:none;transition:opacity .3s}
-.wa-float:hover .wa-tooltip{opacity:1}
+.mob-menu { position: fixed; top: 0; right: -100%; width: 340px; height: 100vh; background: var(--nav-bg); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-left: 1px solid var(--border-sub); box-shadow: -15px 0 50px rgba(0,0,0,0.5); z-index: 1001; padding: 120px 40px 60px; display: flex; flex-direction: column; gap: 12px; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s ease, border-color 0.5s ease; }
+.mob-menu.open { right: 0; }
+.mob-menu a { font-size: 1.25rem; font-weight: 600; color: var(--text-main); text-decoration: none; padding: 16px 0; border-bottom: 1px solid var(--border-sub); transition: all 0.3s ease; display: flex; align-items: center; justify-content: space-between; }
+.mob-menu a:hover { color: var(--text-accent); padding-left: 12px; border-bottom-color: var(--text-accent); }
+.mob-menu .btn-nav { display: inline-flex; justify-content: center; margin-top: 24px; padding: 16px 32px; border-bottom: none; text-align: center; font-size: 1.1rem; box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4); }
+.mob-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+.mob-overlay.open { opacity: 1; pointer-events: all; }
 
-.rv{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
-.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
-.rv-l{opacity:0;transform:translateX(-30px);transition:opacity .65s ease,transform .65s ease}
-.rv-r{opacity:0;transform:translateX(30px);transition:opacity .65s ease,transform .65s ease}
-.rv.vis,.rv-l.vis,.rv-r.vis{opacity:1;transform:translate(0)}
+/* WHATSAPP FLOATING BUTTON */
+.wa-float { position: fixed; bottom: 32px; left: 32px; width: 64px; height: 64px; border-radius: 50%; background: #25D366; color: #fff; border: none; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; z-index: 998; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5); transition: all 0.3s ease; animation: waPulse 2.5s infinite; }
+.wa-float:hover { transform: scale(1.15) rotate(10deg); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.7); }
+@keyframes waPulse { 0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5); } 50% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5), 0 0 0 20px rgba(37, 211, 102, 0.15); } }
+.wa-tooltip { position: absolute; left: 80px; bottom: 50%; transform: translateY(50%); background: var(--badge-bg); backdrop-filter: blur(20px); border: 1px solid var(--border-sub); border-radius: 14px; padding: 10px 20px; white-space: nowrap; font-size: 0.95rem; font-weight: 700; color: var(--text-main); box-shadow: 0 15px 30px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: opacity 0.3s ease, background 0.5s ease; }
+.wa-float:hover .wa-tooltip { opacity: 1; }
 
-@media(max-width:1024px){
-  .photo-pill,.photo-arc-tl,.photo-arc-br{display:none !important}
-  #hero{grid-template-columns:1fr;padding-top:68px}
-  .hero-deco{display:none !important}
-  .hero-photo-fill{display:none !important}
-  .hero-photo-overlay,.pch-reg,.photo-caption-hero,.photo-aura,.photo-shimmer,.photo-dots{display:none !important}
-  .hero-right{min-height:auto;order:-1;overflow:visible !important;display:flex;align-items:center;justify-content:center;background:var(--bg);padding:48px 0 24px;width:100%}
-  .hero-oval-wrap{display:flex !important;position:relative;width:min(68vw,280px);height:min(92vw,400px);flex-shrink:0;margin:0 auto;align-items:center;justify-content:center;animation:ovalFloat 5s ease-in-out infinite}
-  .hero-left{max-width:100%;margin:0;padding:40px 5%;text-align:center;align-items:center}
-  .chip{display:none}
-  .about-grid,.svc-grid,.testi-grid{grid-template-columns:1fr}
-  .clinic-grid{grid-template-columns:1fr;max-width:380px;margin:0 auto}
-  .appt-wrap{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr 1fr}
-  nav .nav-links{display:none}
-}
-@media(max-width:640px){
-  .form-row,.ft-grid{grid-template-columns:1fr}
-  .hero-stats{flex-direction:column;width:100%}
-  .hero-right{min-height:auto}
+.rv { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.rv.d1 { transition-delay: 0.15s; } .rv.d2 { transition-delay: 0.3s; } .rv.d3 { transition-delay: 0.45s; }
+.rv-l { opacity: 0; transform: translateX(-50px); transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.rv-r { opacity: 0; transform: translateX(50px); transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.rv.vis, .rv-l.vis, .rv-r.vis { opacity: 1; transform: translate(0); }
+
+/* RESPONSIVE LAYOUTS */
+@media(max-width: 1200px) {
+  #hero { grid-template-columns: 1fr; padding-top: 140px; text-align: center; gap: 60px; }
+  .hero-left { margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+  .hero-desc { text-align: center; }
+  .hero-btns { justify-content: center; }
+  .hero-right { order: -1; margin-top: 20px; }
+  .about-grid, .clinic-grid { grid-template-columns: 1fr; gap: 60px; }
+  .svc-grid, .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .ft-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .pw-wrap { max-width: 100%; }
 }
 
-/* ── PHOTO ANIMATIONS ── */
-.hero-right{overflow:visible !important}
-
-/* Soft pulsing aura behind photo */
-.photo-aura{
-  position:absolute;inset:-18px;border-radius:3px;
-  background:transparent;
-  box-shadow:
-    0 0 0 1px rgba(181,115,90,0.18),
-    0 0 40px 8px rgba(181,115,90,0.10),
-    0 0 80px 20px rgba(181,115,90,0.06);
-  animation:auraPulse 4s ease-in-out infinite;
-  pointer-events:none;z-index:1;
-}
-@keyframes auraPulse{
-  0%,100%{box-shadow:0 0 0 1px rgba(181,115,90,0.18),0 0 40px 8px rgba(181,115,90,0.10),0 0 80px 20px rgba(181,115,90,0.05);}
-  50%{box-shadow:0 0 0 1px rgba(181,115,90,0.28),0 0 60px 16px rgba(181,115,90,0.18),0 0 110px 30px rgba(181,115,90,0.09);}
+@media(max-width: 1024px) {
+  nav .nav-links, nav .btn-nav { display: none; }
+  .hamburger { display: flex; }
+  .portrait-3d-wrap { width: min(85vw, 380px); height: min(115vw, 500px); }
+  .badge-3d { padding: 12px 18px; }
+  .badge-spec { bottom: 30px; left: -20px; }
+  .badge-reg { top: 20px; right: -20px; }
 }
 
-/* Animated corner arc — top-left */
-.photo-arc-tl{
-  position:absolute;top:-12px;left:-12px;
-  width:80px;height:80px;
-  border-top:2px solid var(--accent);
-  border-left:2px solid var(--accent);
-  border-radius:16px 0 0 0;
-  z-index:5;pointer-events:none;
-  animation:arcGlow 3s ease-in-out infinite;
+@media(max-width: 768px) {
+  .swipe-hint {
+    display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.8rem; color: var(--text-accent); font-weight: 700; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px; animation: swipeBounce 2s infinite ease-in-out;
+  }
+  @keyframes swipeBounce { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+
+  .svc-grid, .testi-grid { 
+    display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 20px; padding-bottom: 24px; scroll-behavior: smooth; margin: 0 -5%; padding-left: 5%; padding-right: 5%;
+  }
+  .svc-card, .testi-card {
+    flex: 0 0 85%; scroll-snap-align: center; min-height: 320px;
+  }
+  section { padding: 80px 5%; }
+  .ft-grid { grid-template-columns: 1fr; }
+  .stat-box { min-width: 100%; }
 }
-/* Animated corner arc — bottom-right */
-.photo-arc-br{
-  position:absolute;bottom:-12px;right:-12px;
-  width:80px;height:80px;
-  border-bottom:2px solid var(--accent);
-  border-right:2px solid var(--accent);
-  border-radius:0 0 16px 0;
-  z-index:5;pointer-events:none;
-  animation:arcGlow 3s ease-in-out infinite;
-  animation-delay:1.5s;
-}
-@keyframes arcGlow{
-  0%,100%{opacity:0.5;transform:scale(1)}
-  50%{opacity:1;transform:scale(1.04)}
-}
-
-/* Floating credential pills on the right side of photo */
-.photo-pill{
-  position:absolute;right:10px;
-  background:rgba(253,248,245,0.92);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border:1px solid rgba(181,115,90,0.25);
-  border-radius:50px;
-  padding:8px 16px 8px 11px;
-  display:flex;align-items:center;gap:8px;
-  box-shadow:0 6px 24px rgba(45,31,26,0.14);
-  white-space:nowrap;z-index:10;
-  animation:floatPill 5s ease-in-out infinite;
-}
-.photo-pill-1{top:42%;animation-delay:0s;}
-@keyframes floatPill{
-  0%,100%{transform:translateX(0)}
-  50%{transform:translateX(8px)}
-}
-.pill-ico{
-  width:26px;height:26px;border-radius:50%;
-  background:var(--accent);
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.7rem;color:#fff;flex-shrink:0;
-}
-.pill-txt{font-size:0.72rem;font-weight:700;color:var(--text);line-height:1.2}
-.pill-sub{font-size:0.58rem;color:var(--text-m);font-weight:500}
-
-/* Shimmering scan highlight across photo */
-.photo-shimmer{
-  position:absolute;inset:0;pointer-events:none;z-index:3;overflow:hidden;
-}
-.photo-shimmer::after{
-  content:'';
-  position:absolute;
-  top:-100%;left:-60%;
-  width:40%;height:300%;
-  background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,0.055) 50%,transparent 60%);
-  animation:shimmerSweep 6s ease-in-out infinite;
-}
-@keyframes shimmerSweep{
-  0%{transform:translateX(-20%)}
-  60%,100%{transform:translateX(260%)}
-}
-
-/* Floating dot particles */
-.photo-dots{position:absolute;inset:0;pointer-events:none;z-index:4;overflow:hidden;}
-.pd{
-  position:absolute;border-radius:50%;
-  background:var(--accent);opacity:0.35;
-  animation:pdFloat linear infinite;
-}
-.pd1{width:4px;height:4px;left:8%;top:20%;animation-duration:8s;animation-delay:0s;}
-.pd2{width:3px;height:3px;left:92%;top:35%;animation-duration:11s;animation-delay:1s;}
-.pd3{width:5px;height:5px;left:5%;top:70%;animation-duration:9s;animation-delay:2s;}
-.pd4{width:3px;height:3px;left:95%;top:75%;animation-duration:13s;animation-delay:0.5s;}
-.pd5{width:4px;height:4px;left:88%;top:15%;animation-duration:10s;animation-delay:3s;}
-@keyframes pdFloat{
-  0%{transform:translateY(0) scale(1);opacity:.35}
-  50%{transform:translateY(-18px) scale(1.2);opacity:.6}
-  100%{transform:translateY(0) scale(1);opacity:.35}
-}
-
-
-/* Mobile hero buttons — centred, full width */
-@media(max-width:640px){
-  .hero-btns{
-    flex-direction:column;
-    width:100%;
-    align-items:center;
-  }
-  .btn-primary,.btn-secondary{
-    width:100%;
-    max-width:320px;
-    justify-content:center;
-  }
-}
-
-
-.hero-oval-wrap{display:none}
-/* ═══════════════════════════════════════
-   MOBILE HERO PHOTO — Animated Oval Frame
-   Only active on screens ≤1024px
-   ═══════════════════════════════════════ */
-@media(max-width:1024px){
-  .hero-deco{display:none !important}
-  .hero-right{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--bg);
-    min-height:unset !important;
-    padding:48px 0 24px;
-    overflow:visible !important;
-    width:100%;
-  }
-
-  /* Hide the full-bleed photo */
-  .hero-photo-fill{
-    display:none !important;
-  }
-
-  /* Show the oval portrait instead */
-  .hero-oval-wrap{
-    position:relative;
-    width:min(68vw, 280px);
-    height:min(92vw, 400px);
-    flex-shrink:0;
-    margin:0 auto;
-    animation:ovalFloat 5s ease-in-out infinite;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  @keyframes ovalFloat{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-14px)}
-  }
-
-  /* Rotating gradient ring */
-  .hero-oval-ring{
-    position:absolute;
-    inset:-6px;
-    border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
-    background:conic-gradient(
-      var(--accent) 0deg,
-      rgba(181,115,90,0.15) 90deg,
-      var(--accent) 180deg,
-      rgba(181,115,90,0.15) 270deg,
-      var(--accent) 360deg
-    );
-    animation:ringRotate 4s linear infinite;
-    z-index:0;
-  }
-  @keyframes ringRotate{
-    to{transform:rotate(360deg)}
-  }
-
-  /* Inner mask so ring looks like a border */
-  .hero-oval-ring::after{
-    content:'';
-    position:absolute;
-    inset:4px;
-    border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
-    background:var(--bg);
-  }
-
-  /* The oval photo itself */
-  .hero-oval-photo{
-    position:absolute;
-    inset:3px;
-    border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
-    object-fit:cover;
-    object-position:center 15%;
-    z-index:1;
-    display:block;
-  }
-
-  /* Soft glow behind oval */
-  .hero-oval-glow{
-    position:absolute;
-    inset:-20px;
-    border-radius:50%;
-    background:radial-gradient(ellipse, rgba(181,115,90,0.18) 0%, transparent 70%);
-    animation:glowPulse 4s ease-in-out infinite;
-    z-index:-1;
-  }
-  @keyframes glowPulse{
-    0%,100%{opacity:0.6;transform:scale(1)}
-    50%{opacity:1;transform:scale(1.08)}
-  }
-
-  /* Orbiting sparkle dots */
-  .hero-oval-dot{
-    position:absolute;
-    width:8px;height:8px;
-    border-radius:50%;
-    background:var(--accent);
-    z-index:2;
-  }
-  .hod1{animation:orbit1 6s linear infinite;}
-  .hod2{animation:orbit2 8s linear infinite;}
-  .hod3{animation:orbit3 7s linear infinite;}
-
-  @keyframes orbit1{
-    0%  {top:-4px; left:50%; transform:translateX(-50%)}
-    25% {top:50%;  left:calc(100% + 4px); transform:translateY(-50%)}
-    50% {top:calc(100% + 4px); left:50%; transform:translateX(-50%)}
-    75% {top:50%;  left:-12px; transform:translateY(-50%)}
-    100%{top:-4px; left:50%; transform:translateX(-50%)}
-  }
-  @keyframes orbit2{
-    0%  {top:30%; left:-10px; transform:translateY(-50%)}
-    50% {top:30%; left:calc(100% + 2px); transform:translateY(-50%)}
-    100%{top:30%; left:-10px; transform:translateY(-50%)}
-  }
-  @keyframes orbit3{
-    0%  {top:calc(100% + 2px); left:35%; transform:translateX(-50%); opacity:1}
-    50% {top:-6px; left:65%; transform:translateX(-50%); opacity:0.4}
-    100%{top:calc(100% + 2px); left:35%; transform:translateX(-50%); opacity:1}
-  }
-
-  /* Hide desktop overlays on mobile */
-  .hero-photo-overlay,
-  .pch-reg,
-  .photo-caption-hero,
-  .photo-aura,
-  .photo-arc-tl,
-  .photo-arc-br,
-  .photo-shimmer,
-  .photo-dots{
-    display:none !important;
-  }
-}
-
 </style>
 </head>
 <body>
+
 <div id="pgbar"></div>
+<div id="cursor-aura"></div>
+<canvas id="bg-canvas"></canvas>
 
-<nav id="nav">
-  <a href="#hero" class="nav-brand">
-    <div class="nav-gem">B</div>
-    <div>
-      <div class="nav-brand-name">Dr. K Bindu Pavani</div>
-      <div class="nav-brand-sub">Obstetrician · Gynaecologist · Fertility Specialist</div>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#qualifications">Credentials</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#clinics">Clinics</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#clinics" class="btn-nav">Visit a Clinic</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mob-overlay" id="mobOverlay"></div>
-<div class="mob-menu" id="mobMenu">
-  <a href="#about" onclick="closeMob()">About</a>
-  <a href="#qualifications" onclick="closeMob()">Credentials</a>
-  <a href="#services" onclick="closeMob()">Services</a>
-  <a href="#clinics" onclick="closeMob()">Clinics</a>
-  <a href="#testimonials" onclick="closeMob()">Reviews</a>
-  <a href="#clinics" class="btn-nav" onclick="closeMob()">Visit a Clinic</a>
+<div id="bg-orbs-container" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; overflow: hidden; pointer-events: none;">
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="ambient-orb orb-3"></div>
 </div>
 
-<section id="hero">
-  <div class="hero-pattern"></div>
-  <div class="hero-deco"></div>
-
-  <div class="hero-left rv">
-    <div class="hero-tag"><div class="tag-dot"></div><span class="tag-txt">Accepting Appointments — Hyderabad</span></div>
-    <h1>
-      <span class="h1-title">Consultant Specialist</span>
-      <span class="h1-name">Dr. Bindu Pavani</span>
-      <span class="h1-role">Obstetrics &amp; Gynaecology · Fertility Specialist</span>
-    </h1>
-    <p class="hero-desc">Over eight years of dedicated, compassionate care in obstetrics, gynaecology, and infertility — bringing modern medicine and human warmth together for every patient.</p>
-    <div class="hero-stats rv d1">
-      <div class="hs"><div class="hs-num" data-count="8" data-suffix="+">0</div><div class="hs-lbl">Years Exp.</div></div>
-      <div class="hs"><div class="hs-num" style="font-size:1.1rem;padding-top:6px">Antenatal</div><div class="hs-lbl">Care</div></div>
-      <div class="hs"><div class="hs-num" style="font-size:1rem;padding-top:6px">Fertility</div><div class="hs-lbl">Specialist</div></div>
-    </div>
-    <div class="hero-btns rv d2">
-      <a href="#clinics" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</a>
-      <a href="#about" class="btn-secondary"><i class="fas fa-user-md"></i> About Doctor</a>
-    </div>
-  </div>
-
-  <!-- bindhu1.jpg = hero image -->
-  <div class="hero-right">
-    <!-- Desktop full-bleed photo -->
-    <img src="images/photo_1.jpg" class="hero-photo-fill" alt="Dr. K Bindu Pavani">
-    <!-- Mobile oval floating portrait -->
-    <div class="hero-oval-wrap">
-      <div class="hero-oval-glow"></div>
-      <div class="hero-oval-ring"></div>
-      <img class="hero-oval-photo" src="images/photo_2.jpg" alt="Dr. K Bindu Pavani">
-      <div class="hero-oval-dot hod1"></div>
-      <div class="hero-oval-dot hod2"></div>
-      <div class="hero-oval-dot hod3"></div>
-    </div>
-    <div class="hero-photo-overlay"></div>
-    <div class="photo-aura"></div>
-    <div class="photo-arc-tl"></div>
-    <div class="photo-arc-br"></div>
-    <div class="photo-shimmer"></div>
-    <div class="photo-dots">
-      <div class="pd pd1"></div>
-      <div class="pd pd2"></div>
-      <div class="pd pd3"></div>
-      <div class="pd pd4"></div>
-      <div class="pd pd5"></div>
-    </div>
-    <!-- Floating credential pills on RIGHT edge — safe zones, not blocking face/caption -->
-    <div class="photo-pill photo-pill-1">
-      <div class="pill-ico"><i class="fas fa-seedling"></i></div>
-      <div><div class="pill-txt">Fertility Specialist</div><div class="pill-sub">IVF · IUI · OBG</div></div>
-    </div>
-    <div class="pch-reg">TSMC 93853</div>
-    <div class="photo-caption-hero">
-      <div class="pch-name">Dr. K Bindu Pavani</div>
-      <div class="pch-sub">MBBS · DGO · DNB (OBG)</div>
-    </div>
-    <!--
-      chip-a: top:42% places it in the mid-torso zone — safely below the face (~0–38%) and above the name caption (~80%+)
-      chip-b: top:62% places it in the lower-torso zone — above the caption band
-      Both are pushed LEFT with left:-170px so they float INTO the left column gap, never over the photo content
-    -->
-
-  </div>
-</section>
-<script>
-(function(){
-  if(window.innerWidth<=1024){
-    var s=document.querySelectorAll('.hero-photo-fill,.hero-deco,.hero-photo-overlay,.pch-reg,.photo-caption-hero,.photo-aura,.photo-shimmer,.photo-dots');
-    for(var i=0;i<s.length;i++)s[i].style.display='none';
-    var o=document.querySelector('.hero-oval-wrap');
-    if(o)o.style.display='flex';
-    var r=document.querySelector('.hero-right');
-    if(r){r.style.display='flex';r.style.alignItems='center';r.style.justifyContent='center';r.style.minHeight='auto';r.style.background='var(--bg)';r.style.padding='48px 0 24px';}
-  }
-})();
-</script>
-
-<div class="ticker">
-  <div class="ticker-track">
-    <div class="ticker-item">Obstetrics &amp; Gynaecology <span class="ticker-dot"></span> High-Risk Pregnancy <span class="ticker-dot"></span> Infertility &amp; IVF <span class="ticker-dot"></span> Laparoscopic Surgery <span class="ticker-dot"></span> Antenatal Care <span class="ticker-dot"></span> PCOS Management <span class="ticker-dot"></span></div>
-    <div class="ticker-item">Obstetrics &amp; Gynaecology <span class="ticker-dot"></span> High-Risk Pregnancy <span class="ticker-dot"></span> Infertility &amp; IVF <span class="ticker-dot"></span> Laparoscopic Surgery <span class="ticker-dot"></span> Antenatal Care <span class="ticker-dot"></span> PCOS Management <span class="ticker-dot"></span></div>
-  </div>
-</div>
-
-<!-- bindhu.jpg = about image -->
-<section id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="rv-l">
-        <div class="about-img-wrap">
-          <img src="images/photo_3.jpg" class="about-img" alt="Dr. Bindu Pavani">
-          <div class="about-badge"><div class="ab-big">8+</div><div class="ab-sm">Years of<br>Excellence</div></div>
-        </div>
-      </div>
-      <div class="about-text rv-r">
-        <div class="sec-label">About</div>
-        <h2 class="sec-h2">Dr. Kakirala <em>Bindu Pavani</em></h2>
-        <p>Dr. Bindu Pavani is a highly accomplished Consultant Obstetrician and Gynaecologist with over eight years of dedicated practice in women's healthcare. She brings together the precision of modern evidence-based medicine and the warmth of patient-centred care.</p>
-        <p>She currently consults at Padma Nursing Home (Karmanghat) and Vaidyalaya Speciality Clinics, Hyderabad.</p>
-        <div class="accordion">
-          <div class="acc open"><div class="acc-hd" onclick="ta(this)"><span>Qualifications</span><i class="fas fa-chevron-down"></i></div><div class="acc-bd">MBBS — RIMS Adilabad | DGO — Gandhi Medical College, Secunderabad | DNB (OBG) — Fernandez Foundation, Hyderabad (2022). TSMC Reg. No. 93853.</div></div>
-          <div class="acc"><div class="acc-hd" onclick="ta(this)"><span>Fertility &amp; IVF</span><i class="fas fa-chevron-down"></i></div><div class="acc-bd">Comprehensive fertility investigations, ovulation induction, IUI, and complete IVF support with individualised protocols.</div></div>
-          <div class="acc"><div class="acc-hd" onclick="ta(this)"><span>Surgical Expertise</span><i class="fas fa-chevron-down"></i></div><div class="acc-bd">Proficient in minimally invasive laparoscopic procedures for ovarian cysts, fibroids, endometriosis, and ectopic pregnancies.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <div class="rv" style="margin-bottom:40px">
-      <div class="sec-label">Clinical Services</div>
-      <h2 class="sec-h2">Areas of <em>Expertise</em></h2>
-      <p class="sec-sub">Comprehensive, specialist care for women at every stage of life.</p>
-    </div>
-    <div class="svc-grid">
-      <div class="svc-card rv"><div class="svc-n">01</div><div class="svc-ico"><i class="fas fa-baby-carriage"></i></div><h3>Obstetrics</h3><p>Expert management of routine and high-risk pregnancies with thorough prenatal monitoring.</p></div>
-      <div class="svc-card rv d1"><div class="svc-n">02</div><div class="svc-ico"><i class="fas fa-venus"></i></div><h3>Gynaecology</h3><p>Diagnosis and treatment of all gynaecological concerns from routine to complex conditions.</p></div>
-      <div class="svc-card rv d2"><div class="svc-n">03</div><div class="svc-ico"><i class="fas fa-dna"></i></div><h3>Infertility &amp; IVF</h3><p>Personalised fertility workup, IUI, and full-spectrum IVF support for couples.</p></div>
-      <div class="svc-card rv"><div class="svc-n">04</div><div class="svc-ico"><i class="fas fa-heartbeat"></i></div><h3>Antenatal &amp; Postnatal</h3><p>Structured monitoring, birth planning, and dedicated postnatal follow-up care.</p></div>
-      <div class="svc-card rv d1"><div class="svc-n">05</div><div class="svc-ico"><i class="fas fa-procedures"></i></div><h3>PCOS &amp; Hormonal Care</h3><p>Holistic management of PCOS, endometriosis, fibroids, and hormonal disorders.</p></div>
-      <div class="svc-card rv d2"><div class="svc-n">06</div><div class="svc-ico"><i class="fas fa-cut"></i></div><h3>Laparoscopy &amp; Hysteroscopy</h3><p>Minimally invasive laparoscopic and hysteroscopic procedures for precise diagnosis and treatment.</p></div>
-      <div class="svc-card rv"><div class="svc-n">07</div><div class="svc-ico"><i class="fas fa-tint"></i></div><h3>Abnormal Uterine Bleeding</h3><p>Thorough evaluation and personalised management of irregular, heavy, or abnormal uterine bleeding.</p></div>
-      <div class="svc-card rv d1"><div class="svc-n">08</div><div class="svc-ico"><i class="fas fa-spa"></i></div><h3>Menopausal Problems</h3><p>Compassionate care and evidence-based treatment for peri- and post-menopausal health concerns.</p></div>
-      <div class="svc-card rv d2"><div class="svc-n">09</div><div class="svc-ico"><i class="fas fa-seedling"></i></div><h3>Fertility Specialist</h3><p>Comprehensive fertility assessments, counselling, and tailored treatment plans for couples trying to conceive.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="qualifications">
-  <div class="wrap">
-    <div class="rv" style="margin-bottom:40px;text-align:center">
-      <div class="sec-label" style="justify-content:center">Education &amp; Credentials</div>
-      <h2 class="sec-h2">Academic <em>Journey</em></h2>
-    </div>
-    <div class="timeline">
-      <div class="tl-item rv"><div class="tl-dot"><i class="fas fa-graduation-cap"></i></div><div class="tl-box"><span class="tl-year">MBBS</span><h3>Rajiv Gandhi Institute of Medical Sciences</h3><p>RIMS, Adilabad, Telangana</p></div></div>
-      <div class="tl-item rv d1"><div class="tl-dot"><i class="fas fa-female"></i></div><div class="tl-box"><span class="tl-year">DGO</span><h3>Diploma in Obstetrics &amp; Gynaecology</h3><p>Gandhi Medical College, Secunderabad</p></div></div>
-      <div class="tl-item rv d2"><div class="tl-dot"><i class="fas fa-award"></i></div><div class="tl-box"><span class="tl-year">DNB · 2022</span><h3>National Board — Obstetrics &amp; Gynaecology</h3><p>Fernandez Foundation, Hyderabad</p></div></div>
-      <div class="tl-item rv d3"><div class="tl-dot"><i class="fas fa-id-badge"></i></div><div class="tl-box"><span class="tl-year">Registration</span><h3>Telangana State Medical Council</h3><p>Reg. No. <strong>93853</strong></p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="clinics">
-  <div class="wrap">
-    <div class="rv" style="margin-bottom:38px">
-      <div class="sec-label">Locations</div>
-      <h2 class="sec-h2">Practice <em>Clinics</em></h2>
-      <p class="sec-sub">Two active clinic locations across Hyderabad.</p>
-    </div>
-    <div class="clinic-grid">
-      
-      <div class="clinic-card rv"><div class="cc-stripe"></div><div class="cc-body2"><div class="cc-tag">Evening Clinic</div><div class="cc-name">Padma Nursing Home</div><div class="cc-row"><i class="fas fa-map-marker-alt"></i><span>Green Park Colony, Karmanghat Road, Saroornagar, Hyderabad – 500035</span></div><div class="cc-row"><i class="fas fa-clock"></i><span>Mon, Wed, Fri: 8:00 PM – 9:30 PM</span></div></div><div class="cc-note"><i class="fas fa-info-circle"></i> Contact clinic for consultation fees</div></div>
-      <div class="clinic-card rv d1"><div class="cc-stripe"></div><div class="cc-body2"><div class="cc-tag">Speciality</div><div class="cc-name">Vaidyalaya Speciality Clinics</div><div class="cc-row"><i class="fas fa-map-marker-alt"></i><span>SK Square, Mansoorabad Rd, beside Kamineni Hospital Lane, L.B. Nagar, Hyderabad – 500068</span></div><div class="cc-row"><i class="fas fa-clock"></i><span>By appointment — please call ahead</span></div></div><div class="cc-note"><i class="fas fa-info-circle"></i> Contact clinic for consultation fees</div></div>
-    </div>
-  </div>
-</section>
-
-
-<section id="testimonials">
-  <div class="wrap">
-    <div class="rv" style="margin-bottom:38px">
-      <div class="sec-label">Patient Stories</div>
-      <h2 class="sec-h2">Words of <em>Trust</em></h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card rv"><div class="tq">"</div><div class="stars">★★★★★</div><blockquote>After two years of struggling, I am now expecting my first baby — thanks to Dr. Bindu Pavani's expert, compassionate guidance. Forever grateful.</blockquote><div class="t-author"><div class="t-av">P</div><div><div class="t-name">Priya S.</div><div class="t-role">Infertility Treatment Patient</div></div></div></div>
-      <div class="testi-card rv d1"><div class="tq">"</div><div class="stars">★★★★★</div><blockquote>My high-risk pregnancy was managed with such skill and calm reassurance. Dr. Bindu Pavani's care made all the difference for our family.</blockquote><div class="t-author"><div class="t-av">L</div><div><div class="t-name">Lakshmi R.</div><div class="t-role">High-Risk Pregnancy Patient</div></div></div></div>
-      <div class="testi-card rv d2"><div class="tq">"</div><div class="stars">★★★★★</div><blockquote>She explained my PCOS clearly and designed a treatment that genuinely worked. My cycles are now regular. I cannot recommend her enough.</blockquote><div class="t-author"><div class="t-av">S</div><div><div class="t-name">Sravanthi M.</div><div class="t-role">PCOS Management Patient</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PREVIOUSLY WORKED -->
-<section id="prev-work" style="background:var(--bg2)">
-  <div class="wrap">
-    <div class="rv" style="margin-bottom:36px">
-      <div class="sec-label">Career History</div>
-      <h2 class="sec-h2">Previously <em>Worked</em></h2>
-      <p class="sec-sub">Institutions where Dr. Bindu Pavani has previously served and contributed her expertise in fertility and women's healthcare.</p>
-    </div>
-    <div style="max-width:480px">
-      <div class="clinic-card rv">
-        <div class="cc-stripe" style="background:var(--text-d)"></div>
-        <div class="cc-body2">
-          <div class="cc-tag" style="color:var(--text-d);letter-spacing:1.5px">Former Position</div>
-          <div class="cc-name">Iswarya Fertility Center</div>
-          <div class="cc-row"><i class="fas fa-map-marker-alt"></i><span>KPHB Colony, Next to Prime Hospital, Kukatpally, Hyderabad</span></div>
-          <div class="cc-row"><i class="fas fa-stethoscope"></i><span>IVF Specialist &amp; Consultant Gynaecologist</span></div>
-          <div class="cc-row"><i class="fas fa-dna"></i><span>Fertility treatments, IUI &amp; IVF protocols</span></div>
-        </div>
-        <div class="cc-note" style="background:rgba(180,140,120,0.06);border-color:rgba(180,140,120,0.18)">
-          <i class="fas fa-info-circle"></i>&nbsp; Dr. Bindu Pavani is no longer associated with this clinic.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<footer>
-  <div class="ft-inner">
-    <div class="ft-grid">
+<div class="page-container">
+  <nav id="nav">
+    <a href="#hero" class="nav-brand">
+      <div class="nav-gem">B</div>
       <div>
-        <div class="ft-logo">Dr. K <span>Bindu Pavani</span></div>
-        <div class="ft-tag">Consultant OBG &amp; IVF Specialist</div>
-        <p class="ft-desc">Providing compassionate, evidence-based women's healthcare across Hyderabad for over 8 years. DNB (OBG) Qualified 2022. TSMC Reg. 93853.</p>
-        <div class="socials">
-          <a href="#" class="sc"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="sc"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="sc"><i class="fab fa-whatsapp"></i></a>
+        <div class="nav-brand-name">Dr. K Bindu Pavani</div>
+        <div class="nav-brand-sub">Obstetrician · Gynaecologist · Fertility Specialist</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#qualifications">Credentials</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#clinics">Clinics</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+    </ul>
+    <div class="nav-actions" style="display: flex; align-items: center; gap: 14px;">
+      <button id="theme-btn" class="theme-toggle" aria-label="Switch Theme"><i class="fas fa-sun"></i></button>
+      <a href="#clinics" class="btn-nav"><i class="fas fa-calendar-check"></i> Visit a Clinic</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  
+  <div class="mob-overlay" id="mobOverlay"></div>
+  <div class="mob-menu" id="mobMenu">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid var(--border-sub); margin-bottom: 10px;">
+      <span style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Appearance</span>
+      <button id="theme-btn-mob" class="theme-toggle" aria-label="Switch Theme"><i class="fas" id="theme-icon-mob"></i></button>
+    </div>
+    <a href="#about" onclick="closeMob()">About <i class="fas fa-chevron-right"></i></a>
+    <a href="#qualifications" onclick="closeMob()">Credentials <i class="fas fa-chevron-right"></i></a>
+    <a href="#services" onclick="closeMob()">Services <i class="fas fa-chevron-right"></i></a>
+    <a href="#clinics" onclick="closeMob()">Clinics <i class="fas fa-chevron-right"></i></a>
+    <a href="#testimonials" onclick="closeMob()">Reviews <i class="fas fa-chevron-right"></i></a>
+    <a href="#clinics" class="btn-nav" onclick="closeMob()"><i class="fas fa-calendar-check"></i> Visit a Clinic</a>
+  </div>
+
+  <section id="hero">
+    <div class="hero-left rv">
+      <div class="hero-tag"><div class="tag-dot"></div><span class="tag-txt">Accepting Appointments — Hyderabad</span></div>
+      <h1>
+        <span class="h1-title">Consultant Specialist</span>
+        <span class="h1-name">Dr. Bindu Pavani</span>
+        <span class="h1-role">Obstetrics &amp; Gynaecology · Fertility Specialist</span>
+      </h1>
+      <p class="hero-desc">Over eight years of dedicated, compassionate care in obstetrics, gynaecology, and infertility — bringing modern medicine and human warmth together for every patient.</p>
+      <div class="hero-stats rv d1">
+        <div class="stat-box card-3d"><div class="hs-num" data-count="8" data-suffix="+">0</div><div class="hs-lbl">Years Exp.</div></div>
+        <div class="stat-box card-3d"><div class="hs-num" style="font-size:1.8rem;padding-top:12px;margin-bottom:12px">Antenatal</div><div class="hs-lbl">Care</div></div>
+        <div class="stat-box card-3d"><div class="hs-num" style="font-size:1.6rem;padding-top:14px;margin-bottom:12px">Fertility</div><div class="hs-lbl">Specialist</div></div>
+      </div>
+      <div class="hero-btns rv d2">
+        <a href="#clinics" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+        <a href="#about" class="btn-secondary"><i class="fas fa-user-md"></i> About Doctor</a>
+      </div>
+    </div>
+
+    <div class="hero-right rv d1">
+      <div class="portrait-3d-wrap card-3d">
+        <div class="portrait-glow-ring"></div>
+        <div class="portrait-inner">
+          <img src="images/photo_1.jpg" alt="Dr. K Bindu Pavani">
+        </div>
+        <div class="badge-3d badge-reg">
+          <div class="badge-ico"><i class="fas fa-user-md"></i></div>
+          <div><div class="badge-txt">Consultant OBG</div><div class="badge-sub">Senior Specialist</div></div>
+        </div>
+        <div class="badge-3d badge-spec">
+          <div class="badge-ico"><i class="fas fa-seedling"></i></div>
+          <div><div class="badge-txt">Fertility Specialist</div><div class="badge-sub">IVF · IUI · OBG</div></div>
+        </div>
+        <div class="badge-3d badge-caption">
+          <div><div class="badge-txt">Dr. K Bindu Pavani</div><div class="badge-sub" style="color:#fff;opacity:0.9">MBBS · DGO · DNB (OBG)</div></div>
         </div>
       </div>
-      <div class="ft-col"><h5>Navigate</h5><ul><li><a href="#about">About</a></li><li><a href="#qualifications">Credentials</a></li><li><a href="#services">Services</a></li><li><a href="#clinics">Clinics</a></li><li><a href="#clinics">Visit a Clinic</a></li></ul></div>
-      <div class="ft-col"><h5>Services</h5><ul><li><a href="#services">Obstetrics</a></li><li><a href="#services">Infertility &amp; IVF</a></li><li><a href="#services">Antenatal Care</a></li><li><a href="#services">PCOS Management</a></li><li><a href="#services">Laparoscopy &amp; Hysteroscopy</a></li></ul></div>
-      <div class="ft-col"><h5>Contact</h5><div class="ft-contact"><i class="fas fa-map-marker-alt"></i><span>Padma Nursing Home, Green Park Colony, Karmanghat, Hyderabad – 500035</span></div><div class="ft-contact"><i class="fas fa-map-marker-alt"></i><span>Vaidyalaya Speciality Clinics, L.B. Nagar, Hyderabad – 500068</span></div><div class="ft-contact"><i class="fas fa-clock"></i><span>Padma: Mon/Wed/Fri · 8–9:30 PM</span></div></div>
     </div>
-    <div class="ft-bottom">
-      <p class="ft-disc"><strong>Disclaimer:</strong> For informational purposes only. Please consult a qualified professional for medical advice.</p>
-      <p class="ft-copy">© 2025 Dr. K Bindu Pavani. All rights reserved.</p>
+  </section>
+
+  <div class="ticker-container">
+    <div class="ticker-track">
+      <div class="ticker-item">Obstetrics &amp; Gynaecology <span class="ticker-dot"></span> High-Risk Pregnancy <span class="ticker-dot"></span> Infertility &amp; IVF <span class="ticker-dot"></span> Laparoscopic Surgery <span class="ticker-dot"></span> Antenatal Care <span class="ticker-dot"></span> PCOS Management <span class="ticker-dot"></span></div>
+      <div class="ticker-item">Obstetrics &amp; Gynaecology <span class="ticker-dot"></span> High-Risk Pregnancy <span class="ticker-dot"></span> Infertility &amp; IVF <span class="ticker-dot"></span> Laparoscopic Surgery <span class="ticker-dot"></span> Antenatal Care <span class="ticker-dot"></span> PCOS Management <span class="ticker-dot"></span></div>
     </div>
   </div>
-</footer>
 
-<button class="stbtn" id="stbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="rv-l">
+          <div class="about-img-wrap card-3d">
+            <img src="images/photo_3.jpg" class="about-img" alt="Dr. Bindu Pavani">
+            <div class="about-badge"><div class="ab-big">8+</div><div class="ab-sm">Years of<br>Excellence</div></div>
+          </div>
+        </div>
+        <div class="about-text rv-r">
+          <div class="sec-label">About</div>
+          <h2 class="sec-h2">Dr. Kakirala <em>Bindu Pavani</em></h2>
+          <p>Dr. Bindu Pavani is a highly accomplished Consultant Obstetrician and Gynaecologist with over eight years of dedicated practice in women's healthcare. She brings together the precision of modern evidence-based medicine and the warmth of patient-centred care.</p>
+          <p>She currently consults at Padma Nursing Home (Karmanghat) and Vaidyalaya Speciality Clinics, Hyderabad.</p>
+          <div class="accordion">
+            <div class="acc open card-3d"><div class="acc-hd" onclick="ta(this)"><span>Qualifications</span><i class="fas fa-chevron-down"></i></div><div class="acc-bd">MBBS — RIMS Adilabad | DGO — Gandhi Medical College, Secunderabad | DNB (OBG) — Fernandez Foundation, Hyderabad (2022).</div></div>
+            <div class="acc card-3d"><div class="acc-hd" onclick="ta(this)"><span>Fertility &amp; IVF</span><i class="fas fa-chevron-down"></i></div><div class="acc-bd">Comprehensive fertility investigations, ovulation induction, IUI, and complete IVF support with individualised protocols.</div></div>
+            <div class="acc card-3d"><div class="acc-hd" onclick="ta(this)"><span>Surgical Expertise</span><i class="fas fa-chevron-down"></i></div><div class="acc-bd">Proficient in minimally invasive laparoscopic procedures for ovarian cysts, fibroids, endometriosis, and ectopic pregnancies.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- WhatsApp Floating Button -->
+  <section id="services">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:60px">
+        <div class="sec-label">Clinical Services</div>
+        <h2 class="sec-h2">Areas of <em>Expertise</em></h2>
+        <p class="sec-sub">Comprehensive, specialist care for women at every stage of life.</p>
+        <div class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> <span>Swipe horizontally to explore</span></div>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card card-3d rv"><div class="svc-n">01</div><div class="svc-ico"><i class="fas fa-baby-carriage"></i></div><div><h3>Obstetrics</h3><p>Expert management of routine and high-risk pregnancies with thorough prenatal monitoring.</p></div></div>
+        <div class="svc-card card-3d rv d1"><div class="svc-n">02</div><div class="svc-ico"><i class="fas fa-venus"></i></div><div><h3>Gynaecology</h3><p>Diagnosis and treatment of all gynaecological concerns from routine to complex conditions.</p></div></div>
+        <div class="svc-card card-3d rv d2"><div class="svc-n">03</div><div class="svc-ico"><i class="fas fa-dna"></i></div><div><h3>Infertility &amp; IVF</h3><p>Personalised fertility workup, IUI, and full-spectrum IVF support for couples.</p></div></div>
+        <div class="svc-card card-3d rv"><div class="svc-n">04</div><div class="svc-ico"><i class="fas fa-heartbeat"></i></div><div><h3>Antenatal &amp; Postnatal</h3><p>Structured monitoring, birth planning, and dedicated postnatal follow-up care.</p></div></div>
+        <div class="svc-card card-3d rv d1"><div class="svc-n">05</div><div class="svc-ico"><i class="fas fa-procedures"></i></div><div><h3>PCOS &amp; Hormonal Care</h3><p>Holistic management of PCOS, endometriosis, fibroids, and hormonal disorders.</p></div></div>
+        <div class="svc-card card-3d rv d2"><div class="svc-n">06</div><div class="svc-ico"><i class="fas fa-cut"></i></div><div><h3>Laparoscopy &amp; Hysteroscopy</h3><p>Minimally invasive laparoscopic and hysteroscopic procedures for precise diagnosis and treatment.</p></div></div>
+        <div class="svc-card card-3d rv"><div class="svc-n">07</div><div class="svc-ico"><i class="fas fa-tint"></i></div><div><h3>Abnormal Uterine Bleeding</h3><p>Thorough evaluation and personalised management of irregular, heavy, or abnormal uterine bleeding.</p></div></div>
+        <div class="svc-card card-3d rv d1"><div class="svc-n">08</div><div class="svc-ico"><i class="fas fa-spa"></i></div><div><h3>Menopausal Problems</h3><p>Compassionate care and evidence-based treatment for peri- and post-menopausal health concerns.</p></div></div>
+        <div class="svc-card card-3d rv d2"><div class="svc-n">09</div><div class="svc-ico"><i class="fas fa-seedling"></i></div><div><h3>Fertility Specialist</h3><p>Comprehensive fertility assessments, counselling, and tailored treatment plans for couples trying to conceive.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="qualifications">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:60px;text-align:center">
+        <div class="sec-label" style="justify-content:center">Education &amp; Credentials</div>
+        <h2 class="sec-h2">Academic <em>Journey</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item rv"><div class="tl-dot"><i class="fas fa-graduation-cap"></i></div><div class="tl-box card-3d"><span class="tl-year">MBBS</span><h3>Rajiv Gandhi Institute of Medical Sciences</h3><p>RIMS, Adilabad, Telangana</p></div></div>
+        <div class="tl-item rv d1"><div class="tl-dot"><i class="fas fa-female"></i></div><div class="tl-box card-3d"><span class="tl-year">DGO</span><h3>Diploma in Obstetrics &amp; Gynaecology</h3><p>Gandhi Medical College, Secunderabad</p></div></div>
+        <div class="tl-item rv d2"><div class="tl-dot"><i class="fas fa-award"></i></div><div class="tl-box card-3d"><span class="tl-year">DNB · 2022</span><h3>National Board — Obstetrics &amp; Gynaecology</h3><p>Fernandez Foundation, Hyderabad</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clinics">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:60px">
+        <div class="sec-label">Locations</div>
+        <h2 class="sec-h2">Practice <em>Clinics</em></h2>
+        <p class="sec-sub">Two active clinic locations across Hyderabad.</p>
+      </div>
+      <div class="clinic-grid">
+        <div class="clinic-card card-3d rv"><div class="cc-stripe"></div><div class="cc-body2"><div class="cc-tag">Evening Clinic</div><div class="cc-name">Padma Nursing Home</div><div class="cc-row"><i class="fas fa-map-marker-alt"></i><span>Green Park Colony, Karmanghat Road, Saroornagar, Hyderabad – 500035</span></div><div class="cc-row"><i class="fas fa-clock"></i><span>Mon, Wed, Fri: 8:00 PM – 9:30 PM</span></div></div><div class="cc-note"><i class="fas fa-info-circle"></i> <span>Contact clinic for consultation fees</span></div></div>
+        <div class="clinic-card card-3d rv d1"><div class="cc-stripe" style="background:var(--gradient-cyan)"></div><div class="cc-body2"><div class="cc-tag" style="color:var(--text-accent)">Speciality</div><div class="cc-name">Vaidyalaya Speciality Clinics</div><div class="cc-row"><i class="fas fa-map-marker-alt"></i><span>SK Square, Mansoorabad Rd, beside Kamineni Hospital Lane, L.B. Nagar, Hyderabad – 500068</span></div><div class="cc-row"><i class="fas fa-clock"></i><span>By appointment — please call ahead</span></div></div><div class="cc-note"><i class="fas fa-info-circle"></i> <span>Contact clinic for consultation fees</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:60px">
+        <div class="sec-label">Patient Stories</div>
+        <h2 class="sec-h2">Words of <em>Trust</em></h2>
+        <div class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> <span>Swipe horizontally to explore</span></div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card card-3d rv"><div class="tq">"</div><div class="stars">★★★★★</div><blockquote>After two years of struggling, I am now expecting my first baby — thanks to Dr. Bindu Pavani's expert, compassionate guidance. Forever grateful.</blockquote><div class="t-author"><div class="t-av">P</div><div><div class="t-name">Priya S.</div><div class="t-role">Infertility Treatment Patient</div></div></div></div>
+        <div class="testi-card card-3d rv d1"><div class="tq">"</div><div class="stars">★★★★★</div><blockquote>My high-risk pregnancy was managed with such skill and calm reassurance. Dr. Bindu Pavani's care made all the difference for our family.</blockquote><div class="t-author"><div class="t-av">L</div><div><div class="t-name">Lakshmi R.</div><div class="t-role">High-Risk Pregnancy Patient</div></div></div></div>
+        <div class="testi-card card-3d rv d2"><div class="tq">"</div><div class="stars">★★★★★</div><blockquote>She explained my PCOS clearly and designed a treatment that genuinely worked. My cycles are now regular. I cannot recommend her enough.</blockquote><div class="t-author"><div class="t-av">S</div><div><div class="t-name">Sravanthi M.</div><div class="t-role">PCOS Management Patient</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prev-work">
+    <div class="wrap pw-wrap">
+      <div class="rv" style="margin-bottom:50px">
+        <div class="sec-label">Career History</div>
+        <h2 class="sec-h2">Previously <em>Worked</em></h2>
+        <p class="sec-sub">Institutions where Dr. Bindu Pavani has previously served and contributed her expertise in fertility and women's healthcare.</p>
+      </div>
+      <div class="clinic-card card-3d rv"><div class="cc-stripe" style="background:var(--text-muted)"></div><div class="cc-body2"><div class="cc-tag" style="color:var(--text-muted)">Former Position</div><div class="cc-name">Iswarya Fertility Center</div><div class="cc-row"><i class="fas fa-map-marker-alt"></i><span>KPHB Colony, Next to Prime Hospital, Kukatpally, Hyderabad</span></div><div class="cc-row"><i class="fas fa-stethoscope"></i><span>IVF Specialist &amp; Consultant Gynaecologist</span></div><div class="cc-row"><i class="fas fa-dna"></i><span>Fertility treatments, IUI &amp; IVF protocols</span></div></div><div class="cc-note"><i class="fas fa-info-circle" style="color:var(--text-muted)"></i> <span>Dr. Bindu Pavani is no longer associated with this clinic.</span></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ft-inner">
+      <div class="ft-grid">
+        <div>
+          <div class="ft-logo">Dr. K <span>Bindu Pavani</span></div>
+          <div class="ft-tag">Consultant OBG &amp; IVF Specialist</div>
+          <p class="ft-desc">Providing compassionate, evidence-based women's healthcare across Hyderabad for over 8 years. DNB (OBG) Qualified 2022.</p>
+          <div class="socials">
+            <a href="#" class="sc"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="sc"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="sc"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="ft-col"><h5>Navigate</h5><ul><li><a href="#about">About</a></li><li><a href="#qualifications">Credentials</a></li><li><a href="#services">Services</a></li><li><a href="#clinics">Clinics</a></li><li><a href="#clinics">Visit a Clinic</a></li></ul></div>
+        <div class="ft-col"><h5>Services</h5><ul><li><a href="#services">Obstetrics</a></li><li><a href="#services">Infertility &amp; IVF</a></li><li><a href="#services">Antenatal Care</a></li><li><a href="#services">PCOS Management</a></li><li><a href="#services">Laparoscopy &amp; Hysteroscopy</a></li></ul></div>
+        <div class="ft-col"><h5>Contact</h5><div class="ft-contact"><i class="fas fa-map-marker-alt"></i><span>Padma Nursing Home, Green Park Colony, Karmanghat, Hyderabad – 500035</span></div><div class="ft-contact"><i class="fas fa-map-marker-alt"></i><span>Vaidyalaya Speciality Clinics, L.B. Nagar, Hyderabad – 500068</span></div><div class="ft-contact"><i class="fas fa-clock"></i><span>Padma: Mon/Wed/Fri · 8–9:30 PM</span></div></div>
+      </div>
+      <div class="ft-bottom">
+        <p class="ft-disc"><strong>Disclaimer:</strong> For informational purposes only. Please consult a qualified professional for medical advice.</p>
+        <p class="ft-copy">© 2025 Dr. K Bindu Pavani. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<button class="stbtn" id="stbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
 <a href="https://wa.me/" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
   <i class="fab fa-whatsapp"></i>
   <span class="wa-tooltip">Chat with us</span>
 </a>
+
 <script>
-window.addEventListener('scroll',()=>{
-  const p=window.scrollY/(document.body.scrollHeight-window.innerHeight)*100;
-  document.getElementById('pgbar').style.width=p+'%';
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
-  document.getElementById('stbtn').classList.toggle('on',window.scrollY>160);
-});
-function ta(btn){const a=btn.closest('.acc');document.querySelectorAll('.acc').forEach(x=>{if(x!==a)x.classList.remove('open');});a.classList.toggle('open');}
-const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.1});
-document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>ro.observe(el));
-const d=document.getElementById('apd');if(d)d.min=new Date().toISOString().split('T')[0];
-function hf(e){
-  e.preventDefault();const b=document.getElementById('sbtn');
-  b.innerHTML='<i class="fas fa-circle-notch fa-spin"></i> Processing...';b.disabled=true;
-  setTimeout(()=>{
-    b.innerHTML='<i class="fas fa-check-circle"></i> Appointment Requested!';b.style.opacity='.85';
-    setTimeout(()=>{b.innerHTML='<i class="fas fa-paper-plane"></i> Request Appointment';b.style.opacity='';b.disabled=false;e.target.reset();},3000);
-  },1500);
+// Theme Engine
+function initTheme() {
+  const savedTheme = localStorage.getItem('dr_bindu_theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcons(savedTheme);
 }
 
-/* Hamburger menu */
-const hbg=document.getElementById('hamburger'),mobMenu=document.getElementById('mobMenu'),mobOvl=document.getElementById('mobOverlay');
-function closeMob(){hbg.classList.remove('active');mobMenu.classList.remove('open');mobOvl.classList.remove('open');document.body.style.overflow='';}
-hbg.addEventListener('click',()=>{const isOpen=mobMenu.classList.toggle('open');hbg.classList.toggle('active');mobOvl.classList.toggle('open');document.body.style.overflow=isOpen?'hidden':'';});
-mobOvl.addEventListener('click',closeMob);
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('dr_bindu_theme', newTheme);
+  updateThemeIcons(newTheme);
+}
 
-/* Counter animation */
-function animateCounter(el,target,suffix){
-  let start=0;const duration=1800;const startTime=performance.now();
-  function step(now){
-    const elapsed=now-startTime;const progress=Math.min(elapsed/duration,1);
-    const eased=1-Math.pow(1-progress,3);
-    const current=Math.floor(eased*target);
-    el.textContent=current+(suffix||'');
-    if(progress<1)requestAnimationFrame(step);
-    else el.textContent=target+(suffix||'');
+function updateThemeIcons(theme) {
+  const isLight = theme === 'light';
+  document.querySelectorAll('.theme-toggle i').forEach(ico => {
+    ico.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+  });
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.setAttribute('aria-label', isLight ? 'Switch to Dark Theme' : 'Switch to Light Theme');
+  });
+}
+
+document.querySelectorAll('.theme-toggle').forEach(btn => btn.addEventListener('click', toggleTheme));
+initTheme();
+
+// Scroll & Nav Handlers
+window.addEventListener('scroll', () => {
+  const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+  const p = scrollTotal > 0 ? (window.scrollY / scrollTotal) * 100 : 0;
+  document.getElementById('pgbar').style.width = p + '%';
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('stbtn').classList.toggle('on', window.scrollY > 300);
+});
+
+// Accordion
+function ta(btn) {
+  const a = btn.closest('.acc');
+  document.querySelectorAll('.acc').forEach(x => { if(x !== a) x.classList.remove('open'); });
+  a.classList.toggle('open');
+}
+
+// Intersection Observer for Animations
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(x => { if(x.isIntersecting) x.target.classList.add('vis'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv, .rv-l, .rv-r').forEach(el => ro.observe(el));
+
+// Mobile Nav Menu
+const hbg = document.getElementById('hamburger'), mobMenu = document.getElementById('mobMenu'), mobOvl = document.getElementById('mobOverlay');
+function closeMob() { hbg.classList.remove('active'); mobMenu.classList.remove('open'); mobOvl.classList.remove('open'); document.body.style.overflow = ''; }
+hbg.addEventListener('click', () => { const isOpen = mobMenu.classList.toggle('open'); hbg.classList.toggle('active'); mobOvl.classList.toggle('open'); document.body.style.overflow = isOpen ? 'hidden' : ''; });
+mobOvl.addEventListener('click', closeMob);
+
+// Animated Counter
+function animateCounter(el, target, suffix) {
+  let start = 0; const duration = 2000; const startTime = performance.now();
+  function step(now) {
+    const elapsed = now - startTime; const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+    el.textContent = current + (suffix || '');
+    if(progress < 1) requestAnimationFrame(step);
+    else el.textContent = target + (suffix || '');
   }
   requestAnimationFrame(step);
 }
-const counterObs=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting&&!entry.target.dataset.counted){
-      entry.target.dataset.counted='1';
-      const nums=entry.target.querySelectorAll('.hs-num[data-count]');
-      nums.forEach(n=>{
-        const val=parseInt(n.dataset.count);
-        const suf=n.dataset.suffix||'';
-        animateCounter(n,val,suf);
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting && !entry.target.dataset.counted) {
+      entry.target.dataset.counted = '1';
+      const nums = entry.target.querySelectorAll('.hs-num[data-count]');
+      nums.forEach(n => {
+        const val = parseInt(n.dataset.count); const suf = n.dataset.suffix || '';
+        animateCounter(n, val, suf);
       });
     }
   });
-},{threshold:.5});
-const statsEl=document.querySelector('.hero-stats');
-if(statsEl)counterObs.observe(statsEl);
+}, { threshold: 0.3 });
+const statsEl = document.querySelector('.hero-stats');
+if(statsEl) counterObs.observe(statsEl);
 
-/* Mobile layout: force hide full-bleed photo, show oval */
-function fixMobileHero(){
-  const w=window.innerWidth;
-  const fill=document.querySelector('.hero-photo-fill');
-  const oval=document.querySelector('.hero-oval-wrap');
-  const deco=document.querySelector('.hero-deco');
-  const overlay=document.querySelector('.hero-photo-overlay');
-  const reg=document.querySelector('.pch-reg');
-  const cap=document.querySelector('.photo-caption-hero');
-  const aura=document.querySelector('.photo-aura');
-  const shimmer=document.querySelector('.photo-shimmer');
-  const dots=document.querySelector('.photo-dots');
-  if(w<=1024){
-    if(fill)fill.style.display='none';
-    if(oval)oval.style.display='flex';
-    if(deco)deco.style.display='none';
-    if(overlay)overlay.style.display='none';
-    if(reg)reg.style.display='none';
-    if(cap)cap.style.display='none';
-    if(aura)aura.style.display='none';
-    if(shimmer)shimmer.style.display='none';
-    if(dots)dots.style.display='none';
-  }else{
-    if(fill)fill.style.display='';
-    if(oval)oval.style.display='none';
-    if(deco)deco.style.display='';
-    if(overlay)overlay.style.display='';
-    if(reg)reg.style.display='';
-    if(cap)cap.style.display='';
-    if(aura)aura.style.display='';
-    if(shimmer)shimmer.style.display='';
-    if(dots)dots.style.display='';
+// Custom Interactive Cursor Aura
+const aura = document.getElementById('cursor-aura');
+window.addEventListener('mousemove', e => {
+  if (aura) {
+    aura.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   }
+});
+
+// Interactive Vanilla JS 3D Tilt for Glassmorphic Cards
+document.querySelectorAll('.card-3d').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
+    card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+  });
+});
+
+// Interactive 3D Background Canvas Particles
+const canvas = document.getElementById('bg-canvas');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+  let particles = [];
+  const particleCount = Math.min(window.innerWidth > 768 ? 80 : 40, 100);
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  for(let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 2.5 + 1,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.5,
+      hue: Math.random() > 0.5 ? 43 : 158, // champagne gold & emerald mint
+      alpha: Math.random() * 0.6 + 0.2
+    });
+  }
+
+  let mouseX = 0, mouseY = 0;
+  window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+
+  function renderParticles() {
+    ctx.clearRect(0, 0, width, height);
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    particles.forEach(p => {
+      const dx = mouseX ? (mouseX - width/2) * 0.0003 : 0;
+      const dy = mouseY ? (mouseY - height/2) * 0.0003 : 0;
+      
+      p.x += p.speedX + dx;
+      p.y += p.speedY + dy;
+
+      if(p.x < 0) p.x = width; if(p.x > width) p.x = 0;
+      if(p.y < 0) p.y = height; if(p.y > height) p.y = 0;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = isLight ? `hsla(${p.hue}, 80%, 45%, ${p.alpha * 0.6})` : `hsla(${p.hue}, 100%, 65%, ${p.alpha})`;
+      ctx.shadowBlur = isLight ? 4 : 10;
+      ctx.shadowColor = isLight ? `hsla(${p.hue}, 80%, 45%, 0.2)` : `hsl(${p.hue}, 100%, 65%)`;
+      ctx.fill();
+    });
+    requestAnimationFrame(renderParticles);
+  }
+  renderParticles();
 }
-fixMobileHero();
-window.addEventListener('resize',fixMobileHero);
 </script>
 </body>
 </html>
