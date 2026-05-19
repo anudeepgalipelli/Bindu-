@@ -1030,6 +1030,53 @@ if (canvas) {
   }
   renderParticles();
 }
+
+// Auto Scroll Mobile Carousels
+function initMobileAutoScroll() {
+  const carousels = document.querySelectorAll('.svc-grid, .testi-grid');
+  carousels.forEach(grid => {
+    let autoScrollReq;
+    let isInteracting = false;
+
+    const autoScroll = () => {
+      if (window.innerWidth > 768 || isInteracting) return;
+      grid.style.scrollSnapType = 'none';
+      grid.scrollLeft += 0.5;
+      if (grid.scrollLeft >= grid.scrollWidth - grid.clientWidth - 1) {
+        grid.scrollLeft = 0; // wrap around
+      }
+      autoScrollReq = requestAnimationFrame(autoScroll);
+    };
+
+    const startAutoScroll = () => {
+      if (isInteracting) return;
+      cancelAnimationFrame(autoScrollReq);
+      autoScrollReq = requestAnimationFrame(autoScroll);
+    };
+
+    const stopAutoScroll = () => {
+      isInteracting = true;
+      cancelAnimationFrame(autoScrollReq);
+      grid.style.scrollSnapType = 'x mandatory';
+    };
+
+    const resumeAutoScroll = () => {
+      isInteracting = false;
+      setTimeout(() => {
+        if (!isInteracting) startAutoScroll();
+      }, 2000);
+    };
+
+    setTimeout(startAutoScroll, 1500);
+
+    grid.addEventListener('touchstart', stopAutoScroll, {passive: true});
+    grid.addEventListener('touchend', resumeAutoScroll);
+    grid.addEventListener('mousedown', stopAutoScroll);
+    grid.addEventListener('mouseup', resumeAutoScroll);
+    grid.addEventListener('mouseleave', resumeAutoScroll);
+  });
+}
+initMobileAutoScroll();
 </script>
 </body>
 </html>
