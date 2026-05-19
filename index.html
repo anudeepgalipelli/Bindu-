@@ -640,7 +640,7 @@ footer { background: var(--bg-main); border-top: 1px solid var(--border-sub); pa
   @keyframes swipeBounce { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
 
   .svc-grid, .testi-grid { 
-    display: flex !important; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 20px; padding-top: 20px; padding-bottom: 40px; scroll-behavior: smooth; margin: -20px -5% 0 -5%; padding-left: 5%; padding-right: 5%;
+    display: flex !important; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 20px; padding-top: 20px; padding-bottom: 40px; scroll-behavior: auto; margin: -20px -5% 0 -5%; padding-left: 5%; padding-right: 5%;
   }
   .svc-card, .testi-card {
     flex: 0 0 85%; scroll-snap-align: center; min-height: 320px;
@@ -1038,43 +1038,69 @@ function initMobileAutoScroll() {
     let autoScrollReq;
     let isInteracting = false;
     let accumulator = 0;
+    let resumeTimeout = null;
+
+    // Force scrollBehavior to auto programmatically to prevent any smooth transitions
+    grid.style.scrollBehavior = 'auto';
 
     const autoScroll = () => {
       autoScrollReq = requestAnimationFrame(autoScroll);
-      if (window.innerWidth > 768 || isInteracting) return;
       
-      grid.style.scrollSnapType = 'none';
-      accumulator += 0.5;
-      if (accumulator >= 1) {
-        grid.scrollLeft += Math.floor(accumulator);
-        accumulator -= Math.floor(accumulator);
+      // Stop scroll if screen is desktop width or user is interacting
+      if (window.innerWidth > 768 || isInteracting) {
+        return;
       }
       
+      // Temporarily disable scroll snapping during auto-scroll movement
+      if (grid.style.scrollSnapType !== 'none') {
+        grid.style.scrollSnapType = 'none';
+      }
+      
+      accumulator += 0.4; // Very slow and smooth scroll increment
+      if (accumulator >= 1) {
+        const scrollAmt = Math.floor(accumulator);
+        grid.scrollLeft += scrollAmt;
+        accumulator -= scrollAmt;
+      }
+      
+      // Wrap around seamlessly
       if (grid.scrollLeft >= grid.scrollWidth - grid.clientWidth - 1) {
-        grid.scrollLeft = 0; // wrap around
+        grid.scrollLeft = 0;
       }
     };
 
-    const stopAutoScroll = () => {
+    const startInteraction = () => {
       isInteracting = true;
       grid.style.scrollSnapType = 'x mandatory';
+      clearTimeout(resumeTimeout);
     };
 
-    let resumeTimeout;
-    const resumeAutoScroll = () => {
+    const resetResumeTimeout = () => {
       clearTimeout(resumeTimeout);
       resumeTimeout = setTimeout(() => {
         isInteracting = false;
-      }, 2000);
+      }, 2500); // Resume auto-scrolling 2.5 seconds after final interaction/momentum ends
     };
 
-    autoScrollReq = requestAnimationFrame(autoScroll);
+    // Touch event listeners for mobile devices
+    grid.addEventListener('touchstart', startInteraction, { passive: true });
+    grid.addEventListener('touchend', resetResumeTimeout, { passive: true });
+    grid.addEventListener('touchcancel', resetResumeTimeout, { passive: true });
 
-    grid.addEventListener('touchstart', stopAutoScroll, {passive: true});
-    grid.addEventListener('touchend', resumeAutoScroll);
-    grid.addEventListener('mousedown', stopAutoScroll);
-    grid.addEventListener('mouseup', resumeAutoScroll);
-    grid.addEventListener('mouseleave', resumeAutoScroll);
+    // Mouse event listeners for desktop testing
+    grid.addEventListener('mousedown', startInteraction);
+    grid.addEventListener('mouseup', resetResumeTimeout);
+    grid.addEventListener('mouseleave', resetResumeTimeout);
+
+    // Reset resume timeout on scroll events to prevent premature resumption during momentum scroll
+    grid.addEventListener('scroll', () => {
+      if (isInteracting) {
+        resetResumeTimeout();
+      }
+    }, { passive: true });
+
+    // Start auto scroll loop
+    autoScrollReq = requestAnimationFrame(autoScroll);
   });
 }
 initMobileAutoScroll();
