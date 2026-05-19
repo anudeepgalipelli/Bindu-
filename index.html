@@ -1037,37 +1037,38 @@ function initMobileAutoScroll() {
   carousels.forEach(grid => {
     let autoScrollReq;
     let isInteracting = false;
+    let accumulator = 0;
 
     const autoScroll = () => {
+      autoScrollReq = requestAnimationFrame(autoScroll);
       if (window.innerWidth > 768 || isInteracting) return;
+      
       grid.style.scrollSnapType = 'none';
-      grid.scrollLeft += 0.5;
+      accumulator += 0.5;
+      if (accumulator >= 1) {
+        grid.scrollLeft += Math.floor(accumulator);
+        accumulator -= Math.floor(accumulator);
+      }
+      
       if (grid.scrollLeft >= grid.scrollWidth - grid.clientWidth - 1) {
         grid.scrollLeft = 0; // wrap around
       }
-      autoScrollReq = requestAnimationFrame(autoScroll);
-    };
-
-    const startAutoScroll = () => {
-      if (isInteracting) return;
-      cancelAnimationFrame(autoScrollReq);
-      autoScrollReq = requestAnimationFrame(autoScroll);
     };
 
     const stopAutoScroll = () => {
       isInteracting = true;
-      cancelAnimationFrame(autoScrollReq);
       grid.style.scrollSnapType = 'x mandatory';
     };
 
+    let resumeTimeout;
     const resumeAutoScroll = () => {
-      isInteracting = false;
-      setTimeout(() => {
-        if (!isInteracting) startAutoScroll();
+      clearTimeout(resumeTimeout);
+      resumeTimeout = setTimeout(() => {
+        isInteracting = false;
       }, 2000);
     };
 
-    setTimeout(startAutoScroll, 1500);
+    autoScrollReq = requestAnimationFrame(autoScroll);
 
     grid.addEventListener('touchstart', stopAutoScroll, {passive: true});
     grid.addEventListener('touchend', resumeAutoScroll);
