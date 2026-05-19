@@ -484,10 +484,10 @@ section {
 .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
 .about-img-wrap { position: relative; border-radius: 32px; padding: 20px; background: var(--img-wrap-bg); border: 1px solid var(--border-sub); box-shadow: 0 30px 60px rgba(0,0,0,0.3); transition: background 0.5s ease, border-color 0.5s ease; }
 .about-img, .about-img-wrap img { width: 100%; border-radius: 24px; display: block; object-fit: cover; }
-.about-badge { position: absolute; bottom: -20px; right: -20px; width: 130px; height: 130px; border-radius: 32px; background: var(--gradient-rose); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4); border: 4px solid var(--bg-sec); transform: rotate(5deg); transition: transform 0.3s ease, border-color 0.5s ease; }
-.about-badge:hover { transform: scale(1.1) rotate(0deg); }
-.ab-big { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 800; color: #fff; line-height: 1; }
-.ab-sm { font-size: 0.75rem; color: #fff; font-weight: 700; text-align: center; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.about-badge { position: absolute; bottom: 20px; left: 20px; right: 20px; height: auto; padding: 16px 20px; border-radius: 0 0 24px 24px; background: var(--badge-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 16px; border-top: 1px solid var(--border-sub); box-shadow: 0 -10px 40px rgba(0,0,0,0.15); transition: all 0.3s ease; }
+.about-badge:hover { background: var(--card-bg); }
+.ab-big { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 700; color: var(--text-accent); line-height: 1; }
+.ab-sm { font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 2px; text-align: left; margin-top: 0; line-height: 1.3; }
 
 .about-text p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 20px; font-weight: 400; }
 
@@ -640,7 +640,7 @@ footer { background: var(--bg-main); border-top: 1px solid var(--border-sub); pa
   @keyframes swipeBounce { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
 
   .svc-grid, .testi-grid { 
-    display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 20px; padding-bottom: 24px; scroll-behavior: smooth; margin: 0 -5%; padding-left: 5%; padding-right: 5%;
+    display: flex !important; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 20px; padding-top: 20px; padding-bottom: 40px; scroll-behavior: smooth; margin: -20px -5% 0 -5%; padding-left: 5%; padding-right: 5%;
   }
   .svc-card, .testi-card {
     flex: 0 0 85%; scroll-snap-align: center; min-height: 320px;
@@ -866,15 +866,11 @@ footer { background: var(--bg-main); border-top: 1px solid var(--border-sub); pa
 
 <button class="stbtn" id="stbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-<a href="https://wa.me/" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-  <span class="wa-tooltip">Chat with us</span>
-</a>
 
 <script>
 // Theme Engine
 function initTheme() {
-  const savedTheme = localStorage.getItem('dr_bindu_theme') || 'dark';
+  const savedTheme = localStorage.getItem('dr_bindu_theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcons(savedTheme);
 }
@@ -1002,7 +998,7 @@ if (canvas) {
       size: Math.random() * 2.5 + 1,
       speedX: (Math.random() - 0.5) * 0.5,
       speedY: (Math.random() - 0.5) * 0.5,
-      hue: Math.random() > 0.5 ? 43 : 158, // champagne gold & emerald mint
+      hue: 43, // champagne gold
       alpha: Math.random() * 0.6 + 0.2
     });
   }
